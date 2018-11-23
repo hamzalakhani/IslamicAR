@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:QiblaAR.xcodeproj">
+      location = "self:/Users/hamzalakhani/Desktop/QiblaAR/QiblaAR.xcodeproj">
    </FileRef>
 </Workspace>
