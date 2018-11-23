@@ -10,10 +10,13 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
-
+class ViewController: UIViewController {
+//, ARSCNViewDelegate
     
-    var kabaaMNode = KabaaNode()
+    var focusSquare: FocusSquare?
+    var screenCenter: CGPoint!
+    var modelsInTheScene:Array<SCNNode> = []
+    
     
     @IBOutlet var sceneView: ARSCNView!
     
@@ -23,24 +26,55 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     
+//    @IBAction func plusButtontapped(_ sender: UIButton) {
+//        
+//        let scalePlus = SCNAction.scale(by: 2, duration: 2)
+//        
+//        
+//        let firstVisibleModel = modelsInTheScene.first
+//        
+//        firstVisibleModel?.runAction(scalePlus)
+//
+//
+//
+//        }
+//
+//    
+//    @IBAction func minusButtonTapped(_ sender: UIButton) {
+//        let scaleMinus = SCNAction.scale(by: 0.5, duration: 2)
+//        
+//        
+//        let firstVisibleModel = modelsInTheScene.first
+//        
+//        firstVisibleModel?.runAction(scaleMinus)
+//    }
     
-    @IBAction func plusButtontapped(_ sender: UIButton) {
+    
+    @objc func rotated(sender: UIRotationGestureRecognizer){
+        let firstVisibleModel = modelsInTheScene.first
+
+            if sender.state == .began || sender.state == .changed {
+                firstVisibleModel?.eulerAngles = SCNVector3(CGFloat((firstVisibleModel?.eulerAngles.x)!),sender.rotation,CGFloat((firstVisibleModel?.eulerAngles.z)!))
+            }
+        }
         
-        let scalePlus = SCNAction.scale(by: 2, duration: 2)
-        kabaaMNode.runAction(scalePlus)
-    }
+
     
-    @IBAction func minusButtonTapped(_ sender: UIButton) {
-        let scaleMinus = SCNAction.scale(by: 0.5, duration: 2)
-        kabaaMNode.runAction(scaleMinus)
-    }
+       @objc func pinched(sender: UIPinchGestureRecognizer) {
+        
+        let firstVisibleModel = modelsInTheScene.first
+            
+            let action = SCNAction.scale(by: sender.scale, duration: 0.1)
+        firstVisibleModel!.runAction(action)
+            sender.scale = 1
+            
+
+        }
     
-    
-    
-    var planeGeometry:SCNPlane!
-    let planeIdentifiers = [UUID]()
-    var anchors = [ARAnchor]()
-    var sceneLight:SCNLight!
+//    var planeGeometry:SCNPlane!
+//    let planeIdentifiers = [UUID]()
+//    var anchors = [ARAnchor]()
+//    var sceneLight:SCNLight!
     
     
     
@@ -51,31 +85,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        sceneView.showsStatistics = false
         
         // Create a new scene
 //        let scene = SCNScene(named: "art.scnassets/kabaa.scn")!
         
-        sceneView.autoenablesDefaultLighting = false
+        sceneView.autoenablesDefaultLighting = true
+        sceneView.automaticallyUpdatesLighting = true
     
         
-        let scene = SCNScene()
+        screenCenter = view.center
         
-        // Set the scene to the view
-        sceneView.scene = scene
-        
-        
-        
-        sceneLight = SCNLight()
-        sceneLight.type = .omni
-        
-        let lightNode = SCNNode()
-        lightNode.light = sceneLight
-        lightNode.position = SCNVector3(x: 0, y: 10, z: 2)
-        
-        sceneView.scene.rootNode.addChildNode(lightNode)
+//        let scene = SCNScene()
+//
+//        // Set the scene to the view
+//        sceneView.scene = scene
         
         
+        
+//        sceneLight = SCNLight()
+//        sceneLight.type = .omni
+//
+//        let lightNode = SCNNode()
+//        lightNode.light = sceneLight
+//        lightNode.position = SCNVector3(x: 0, y: 10, z: 2)
+//
+//        sceneView.scene.rootNode.addChildNode(lightNode)
+        
+        addGestures()
     }
     
     
@@ -85,104 +122,132 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
         configuration.planeDetection = .horizontal
-        configuration.isLightEstimationEnabled = true
+//        configuration.isLightEstimationEnabled = true
         
 
         // Run the view's session
         sceneView.session.run(configuration)
     }
     
-//    setting up touch to locate space for 3d object
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        let location = touch?.location(in: sceneView)
 
-       
-        addNodeLocation(location: location!)
-        }
-    
-    
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        let viewCenter = CGPoint(x: size.width / 2, y: size.height / 2)
+        screenCenter = viewCenter
     }
-
+    
+    //gestures input
+    func addGestures(){
+        
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinched(sender:)))
+        sceneView.addGestureRecognizer(pinchGesture)
+        
+        let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotated(sender:)))
+        sceneView.addGestureRecognizer(rotateGesture)
+    }
+    
+    func updateFocusSquare() {
+        guard let focusSquareLocal = focusSquare else {return}
+        
+        
+        guard let pointOfView = sceneView.pointOfView else {return}
+        
+        let firstVisibleModel = modelsInTheScene.first { (node) -> Bool in
+            return sceneView.isNode(node, insideFrustumOf: pointOfView)
+        }
+        let modelsAreVisible = firstVisibleModel != nil
+        if modelsAreVisible != focusSquareLocal.isHidden {
+            focusSquareLocal.setHidden(to: modelsAreVisible)
+        }
+        
+        
+        let hitTest = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
+        if let hitTestResult = hitTest.first {
+//            print("Focus square hits a plane")
+            
+            let canAddNewModel = hitTestResult.anchor is ARPlaneAnchor
+            focusSquareLocal.isClosed = canAddNewModel
+        } else {
+//            print("Focus square does not hit a plane")
+            
+            focusSquareLocal.isClosed = false
+        }
+    }
+    
+    
+    
     // MARK: - ARSCNViewDelegate
     
 
     // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        var node: SCNNode?
-     
-        if let planeAnchor = anchor as? ARPlaneAnchor {
-            node = SCNNode()
-            planeGeometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
-            planeGeometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.5)
-            
-            let planNode = SCNNode(geometry: planeGeometry)
-            planNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
-            planNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
-            updateMaterial()
-            
-            node?.addChildNode(planNode)
-            
-            anchors.append(planeAnchor)
-            
-        }
-        
-        return node
-    }
+//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+//        var node: SCNNode?
+//
+//        if let planeAnchor = anchor as? ARPlaneAnchor {
+//            node = SCNNode()
+//            planeGeometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
+//            planeGeometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.5)
+//
+//            let planNode = SCNNode(geometry: planeGeometry)
+//            planNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
+//            planNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
+//            updateMaterial()
+//
+//            node?.addChildNode(planNode)
+//
+//            anchors.append(planeAnchor)
+//
+//        }
+//
+//        return node
+//    }
 
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        if let planeAnchor = anchor as? ARPlaneAnchor {
-            if anchors.contains(planeAnchor){
-                if node.childNodes.count > 0{
-                    let planeNode = node.childNodes.first!
-                    planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
-                    
-                    if let plane = planeNode.geometry as? SCNPlane{
-                        plane.width = CGFloat(planeAnchor.extent.x)
-                        plane.height = CGFloat(planeAnchor.extent.z)
-                        
-                        updateMaterial()
-                    }
-                }
-            }
-            
-        }
-    }
+//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+//        if let planeAnchor = anchor as? ARPlaneAnchor {
+//            if anchors.contains(planeAnchor){
+//                if node.childNodes.count > 0{
+//                    let planeNode = node.childNodes.first!
+//                    planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
+//                    
+//                    if let plane = planeNode.geometry as? SCNPlane{
+//                        plane.width = CGFloat(planeAnchor.extent.x)
+//                        plane.height = CGFloat(planeAnchor.extent.z)
+//                        
+//                        updateMaterial()
+//                    }
+//                }
+//            }
+//            
+//        }
+//    }
+//
+//    func updateMaterial()  {
+//        let material = self.planeGeometry.materials.first!
+//        material.diffuse.contentsTransform = SCNMatrix4MakeScale(Float(self.planeGeometry.width), Float(self.planeGeometry.height), 1)
+//    }
+//
+//
+//
+//
+//
+//    func addNodeLocation(location:CGPoint) {
+//        guard anchors.count > 0 else {print("anchors are not created yet"); return}
+//
+//        let hitResults = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
+//        if hitResults.count > 0 {
+//            let result = hitResults.first!
+//            let newLocation = SCNVector3(x: result.worldTransform.columns.3.x, y: result.worldTransform.columns.3.y , z: result.worldTransform.columns.3.z)
+//
+//            let kabaaNode = KabaaNode()
+//            kabaaMNode = kabaaNode
+//            kabaaNode.position = newLocation
+//            sceneView.scene.rootNode.addChildNode(kabaaNode)
+//
+//        }
+//    }
+//
     
-    func updateMaterial()  {
-        let material = self.planeGeometry.materials.first!
-        material.diffuse.contentsTransform = SCNMatrix4MakeScale(Float(self.planeGeometry.width), Float(self.planeGeometry.height), 1)
-    }
-    
-    
-    
-    
-    
-    func addNodeLocation(location:CGPoint) {
-        guard anchors.count > 0 else {print("anchors are not created yet"); return}
-        
-        let hitResults = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
-        if hitResults.count > 0 {
-            let result = hitResults.first!
-            let newLocation = SCNVector3(x: result.worldTransform.columns.3.x, y: result.worldTransform.columns.3.y , z: result.worldTransform.columns.3.z)
-            
-            let kabaaNode = KabaaNode()
-            kabaaMNode = kabaaNode
-            kabaaNode.position = newLocation
-            sceneView.scene.rootNode.addChildNode(kabaaNode)
-            
-        }
-    }
-    
-    
-    
+   
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user

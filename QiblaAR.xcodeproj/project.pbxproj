@@ -16,7 +16,8 @@
 		CA0967A921A4D33E002369FD /* QiblaARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967A821A4D33E002369FD /* QiblaARTests.swift */; };
 		CA0967B421A4D33E002369FD /* QiblaARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967B321A4D33E002369FD /* QiblaARUITests.swift */; };
 		CA0967C221A4F9D8002369FD /* KabaaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967C121A4F9D8002369FD /* KabaaNode.swift */; };
-		CAFB6D9721A783BC0039CDD5 /* VC+ARSNView Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9621A783BC0039CDD5 /* VC+ARSNView Delegate.swift */; };
+		CAFB6D9721A783BC0039CDD5 /* KabaaARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9621A783BC0039CDD5 /* KabaaARSCNView.swift */; };
+		CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		CA0967B321A4D33E002369FD /* QiblaARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaARUITests.swift; sourceTree = "<group>"; };
 		CA0967B521A4D33E002369FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0967C121A4F9D8002369FD /* KabaaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabaaNode.swift; sourceTree = "<group>"; };
-		CAFB6D9621A783BC0039CDD5 /* VC+ARSNView Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSNView Delegate.swift"; sourceTree = "<group>"; };
+		CAFB6D9621A783BC0039CDD5 /* KabaaARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabaaARSCNView.swift; sourceTree = "<group>"; };
+		CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,8 @@
 				CA09679121A4D33D002369FD /* AppDelegate.swift */,
 				CA09679321A4D33D002369FD /* art.scnassets */,
 				CA09679521A4D33D002369FD /* ViewController.swift */,
-				CAFB6D9621A783BC0039CDD5 /* VC+ARSNView Delegate.swift */,
+				CAFB6D9621A783BC0039CDD5 /* KabaaARSCNView.swift */,
+				CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */,
 				CA0967C121A4F9D8002369FD /* KabaaNode.swift */,
 				CA09679721A4D33D002369FD /* Main.storyboard */,
 				CA09679A21A4D33E002369FD /* Assets.xcassets */,
@@ -269,7 +272,8 @@
 				CA09679621A4D33D002369FD /* ViewController.swift in Sources */,
 				CA0967C221A4F9D8002369FD /* KabaaNode.swift in Sources */,
 				CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */,
-				CAFB6D9721A783BC0039CDD5 /* VC+ARSNView Delegate.swift in Sources */,
+				CAFB6D9721A783BC0039CDD5 /* KabaaARSCNView.swift in Sources */,
+				CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
