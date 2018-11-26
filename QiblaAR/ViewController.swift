@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var focusSquare: FocusSquare?
     var screenCenter: CGPoint!
     var modelsInTheScene:Array<SCNNode> = []
-    
+    var selectedNode = SCNNode()
     
     //Store The Rotation Of The CurrentNode
     var currentAngleY: Float = 0.0
@@ -336,21 +336,8 @@ class ViewController: UIViewController {
 extension ViewController: DialogViewControllerDelegate{
     func screenImageButtontapped(node: SCNNode) {
         
+        selectedNode = node
         
-        guard focusSquare != nil else {return}
-        
-        
-        
-        
-        let hitTest = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
-        guard let worldTransformColumn3 = hitTest.first?.worldTransform.columns.3 else {return}
-        node.position = SCNVector3(worldTransformColumn3.x, worldTransformColumn3.y, worldTransformColumn3.z)
-        
-        sceneView.scene.rootNode.addChildNode(node)
-        //            print("\(modelName) added successfully")
-        
-        modelsInTheScene.append(node)
-        print("Currently have \(modelsInTheScene.count) model(s) in the scene")
     }
     }
     

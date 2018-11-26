@@ -17,9 +17,8 @@ class DialogViewController: UIViewController {
     let screens = ["KabaaImage", "QuranImage"]
     let titles = ["Holy Kabaa","Holy Quran"]
     let images = ["",""]
-    let kabahNode = KabahNode()
-    let quranNode = QuranNode()
-    let nodeArray : [SCNNode] = [KabahNode(),QuranNode()]
+    
+    let nodeArray  = [KabahNode(),QuranNode()]
 
     
     //let names
@@ -60,6 +59,7 @@ extension DialogViewController: UICollectionViewDelegate, UICollectionViewDataSo
 
 
 extension DialogViewController: DialogCollectionViewCellDelegate{
+    
     func screenImageButtonTapped(index: Int) {
         dismiss(animated: true, completion: nil)
 //        delegate?.screenImageButtontapped(image: UIImage(named: images[index])!)

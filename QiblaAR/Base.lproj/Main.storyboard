@@ -123,7 +123,7 @@
                                                             </constraints>
                                                             <state key="normal" image="KabaaImage"/>
                                                             <connections>
-                                                                <action selector="screenImageButoonTapped:" destination="LUR-hd-qPM" eventType="touchUpInside" id="431-la-r7V"/>
+                                                                <action selector="screenImageButtonTapped:" destination="LUR-hd-qPM" eventType="touchUpInside" id="LMh-Us-i7d"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">

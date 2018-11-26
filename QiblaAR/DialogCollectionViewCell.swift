@@ -19,12 +19,11 @@ class DialogCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var screenLabel: UILabel!
     
     
-    @IBAction func screenImageButtonTapped(_ sender: Any) {
-        
-
-        
+    @IBAction func screenImageButtonTapped(_ sender: UIButton) {
         delegate?.screenImageButtonTapped(index: index)
+
     }
+    
     
     
 }
