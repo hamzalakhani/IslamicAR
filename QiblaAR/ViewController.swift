@@ -12,6 +12,9 @@ import ARKit
 
 class ViewController: UIViewController {
 //, ARSCNViewDelegate
+    @IBOutlet weak var plusButton: UIButton!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var dalogButton: UIButton!
     
     var focusSquare: FocusSquare?
     var screenCenter: CGPoint!
@@ -32,6 +35,7 @@ class ViewController: UIViewController {
         
         performSegue(withIdentifier: "HomeToDialog", sender: nil)
         
+
     }
     
     
@@ -54,6 +58,9 @@ class ViewController: UIViewController {
         modelsInTheScene.first?.removeFromParentNode()
 
         modelsInTheScene.removeFirst()
+        
+        plusButton.isHidden = false
+        
 
     }
     

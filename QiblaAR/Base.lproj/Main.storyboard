@@ -71,6 +71,9 @@
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
+                        <outlet property="dalogButton" destination="UiJ-5W-MI1" id="D95-fJ-8qb"/>
+                        <outlet property="minusButton" destination="ALn-N7-xFi" id="ewT-0z-a1e"/>
+                        <outlet property="plusButton" destination="igp-dZ-6ka" id="EVN-IM-XUD"/>
                         <outlet property="sceneView" destination="GGv-jl-WFL" id="htX-h3-MxA"/>
                         <segue destination="sne-BG-PPm" kind="presentation" identifier="HomeToDialog" modalPresentationStyle="overCurrentContext" id="rW6-Od-5cX"/>
                     </connections>
