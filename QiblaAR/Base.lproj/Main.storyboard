@@ -27,7 +27,9 @@
                                     <constraint firstAttribute="width" constant="50" id="fSx-ks-VWo"/>
                                     <constraint firstAttribute="height" constant="50" id="vUN-pw-YHG"/>
                                 </constraints>
-                                <state key="normal" image="PlaceScreen"/>
+                                <state key="normal" image="PlaceScreen">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="placeScreenTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="T5r-Ad-7NL"/>
                                 </connections>
@@ -93,15 +95,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9d-fN-7zq">
                                 <rect key="frame" x="0.0" y="287" width="375" height="380"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Sceen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJQ-lZ-CB6">
-                                        <rect key="frame" x="122" y="30" width="131" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJQ-lZ-CB6">
+                                        <rect key="frame" x="103" y="30" width="169.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lUH-OZ-G0a">
                                         <rect key="frame" x="0.0" y="81" width="375" height="250"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="0UF-Rk-OFr"/>
                                         </constraints>
@@ -119,10 +121,11 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="140" height="250"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-1V-273">
-                                                            <rect key="frame" x="8" y="28" width="124" height="220"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-1V-273">
+                                                            <rect key="frame" x="8" y="28" width="124" height="158"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="220" id="ztS-86-ELt"/>
+                                                                <constraint firstAttribute="height" constant="158" id="ztS-86-ELt"/>
                                                             </constraints>
                                                             <state key="normal" image="KabaaImage"/>
                                                             <connections>
@@ -130,9 +133,9 @@
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">
-                                                            <rect key="frame" x="26.5" y="221" width="87" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="22.5" y="221.5" width="95.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -152,13 +155,14 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="1vf-6I-0YV"/>
                                     <constraint firstAttribute="trailing" secondItem="lUH-OZ-G0a" secondAttribute="trailing" id="3nw-te-VVF"/>
                                     <constraint firstItem="FJQ-lZ-CB6" firstAttribute="top" secondItem="N9d-fN-7zq" secondAttribute="top" constant="30" id="6M7-LB-FZp"/>
                                     <constraint firstItem="FJQ-lZ-CB6" firstAttribute="top" secondItem="N9d-fN-7zq" secondAttribute="top" constant="30" id="7Ko-uM-8uy"/>
                                     <constraint firstItem="FJQ-lZ-CB6" firstAttribute="centerX" secondItem="N9d-fN-7zq" secondAttribute="centerX" id="8AQ-wY-Q0S"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="380" id="PD0-4d-0ol"/>
                                     <constraint firstItem="lUH-OZ-G0a" firstAttribute="top" secondItem="FJQ-lZ-CB6" secondAttribute="bottom" constant="30" id="jYP-Bp-KRQ"/>
                                     <constraint firstItem="lUH-OZ-G0a" firstAttribute="leading" secondItem="N9d-fN-7zq" secondAttribute="leading" id="zqy-zx-OUo"/>
                                 </constraints>
@@ -172,6 +176,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N9d-fN-7zq" firstAttribute="leading" secondItem="Hcs-cx-jFi" secondAttribute="leading" id="C7j-pn-cp9"/>
+                            <constraint firstItem="N9d-fN-7zq" firstAttribute="leading" secondItem="Hcs-cx-jFi" secondAttribute="leading" id="IyN-K0-Zew"/>
+                            <constraint firstItem="N9d-fN-7zq" firstAttribute="trailing" secondItem="Hcs-cx-jFi" secondAttribute="trailing" id="VEZ-gJ-YsU"/>
+                            <constraint firstAttribute="bottom" secondItem="N9d-fN-7zq" secondAttribute="bottom" id="a1y-Dq-vIx"/>
+                            <constraint firstItem="N9d-fN-7zq" firstAttribute="bottom" secondItem="Hcs-cx-jFi" secondAttribute="bottom" id="dfR-ta-yjE"/>
                             <constraint firstItem="Hcs-cx-jFi" firstAttribute="bottom" secondItem="N9d-fN-7zq" secondAttribute="bottom" id="jMg-24-gOz"/>
                             <constraint firstItem="Hcs-cx-jFi" firstAttribute="trailing" secondItem="N9d-fN-7zq" secondAttribute="trailing" id="zzM-ec-sdR"/>
                         </constraints>
@@ -188,7 +196,7 @@
     </scenes>
     <resources>
         <image name="Add" width="50" height="50"/>
-        <image name="KabaaImage" width="206" height="388"/>
+        <image name="KabaaImage" width="800" height="800"/>
         <image name="Minus" width="50" height="50"/>
         <image name="PlaceScreen" width="50" height="50"/>
     </resources>

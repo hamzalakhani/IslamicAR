@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09679121A4D33D002369FD /* AppDelegate.swift */; };
+		CA09679421A4D33D002369FD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CA09679321A4D33D002369FD /* art.scnassets */; };
+		CA09679621A4D33D002369FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09679521A4D33D002369FD /* ViewController.swift */; };
+		CA09679921A4D33D002369FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA09679721A4D33D002369FD /* Main.storyboard */; };
+		CA09679B21A4D33E002369FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA09679A21A4D33E002369FD /* Assets.xcassets */; };
+		CA09679E21A4D33E002369FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA09679C21A4D33E002369FD /* LaunchScreen.storyboard */; };
+		CA0967A921A4D33E002369FD /* QiblaARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967A821A4D33E002369FD /* QiblaARTests.swift */; };
+		CA0967B421A4D33E002369FD /* QiblaARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967B321A4D33E002369FD /* QiblaARUITests.swift */; };
+		CA0967C221A4F9D8002369FD /* VC+AddObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967C121A4F9D8002369FD /* VC+AddObject.swift */; };
+		CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */; };
+		CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */; };
+		CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */; };
+		CAFB6D9F21A8CA890039CDD5 /* DialogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */; };
+		CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA021AA40940039CDD5 /* KabahNode.swift */; };
+		CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */; };
+		CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA0967A521A4D33E002369FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA09678621A4D33D002369FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA09678D21A4D33D002369FD;
+			remoteInfo = QiblaAR;
+		};
+		CA0967B021A4D33E002369FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA09678621A4D33D002369FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA09678D21A4D33D002369FD;
+			remoteInfo = QiblaAR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA09678E21A4D33D002369FD /* IslamicLandmarksAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IslamicLandmarksAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA09679121A4D33D002369FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA09679321A4D33D002369FD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		CA09679521A4D33D002369FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA09679821A4D33D002369FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA09679A21A4D33E002369FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA09679D21A4D33E002369FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA09679F21A4D33E002369FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0967A421A4D33E002369FD /* IslamicLandmarksARTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IslamicLandmarksARTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0967A821A4D33E002369FD /* QiblaARTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaARTests.swift; sourceTree = "<group>"; };
+		CA0967AA21A4D33E002369FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0967AF21A4D33E002369FD /* IslamicLandmarksARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IslamicLandmarksARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0967B321A4D33E002369FD /* QiblaARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaARUITests.swift; sourceTree = "<group>"; };
+		CA0967B521A4D33E002369FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0967C121A4F9D8002369FD /* VC+AddObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+AddObject.swift"; sourceTree = "<group>"; };
+		CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSCNView.swift"; sourceTree = "<group>"; };
+		CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogCollectionViewCell.swift; sourceTree = "<group>"; };
+		CAFB6DA021AA40940039CDD5 /* KabahNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabahNode.swift; sourceTree = "<group>"; };
+		CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranNode.swift; sourceTree = "<group>"; };
+		CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqsaNode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA09678B21A4D33D002369FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967A121A4D33E002369FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967AC21A4D33E002369FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CA09678521A4D33D002369FD = {
+			isa = PBXGroup;
+			children = (
+				CA09679021A4D33D002369FD /* QiblaAR */,
+				CA0967A721A4D33E002369FD /* QiblaARTests */,
+				CA0967B221A4D33E002369FD /* QiblaARUITests */,
+				CA09678F21A4D33D002369FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CA09678F21A4D33D002369FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA09678E21A4D33D002369FD /* IslamicLandmarksAR.app */,
+				CA0967A421A4D33E002369FD /* IslamicLandmarksARTests.xctest */,
+				CA0967AF21A4D33E002369FD /* IslamicLandmarksARUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA09679021A4D33D002369FD /* QiblaAR */ = {
+			isa = PBXGroup;
+			children = (
+				CA09679121A4D33D002369FD /* AppDelegate.swift */,
+				CA09679321A4D33D002369FD /* art.scnassets */,
+				CA09679521A4D33D002369FD /* ViewController.swift */,
+				CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */,
+				CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */,
+				CA0967C121A4F9D8002369FD /* VC+AddObject.swift */,
+				CAFB6DA021AA40940039CDD5 /* KabahNode.swift */,
+				CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */,
+				CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */,
+				CA09679721A4D33D002369FD /* Main.storyboard */,
+				CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */,
+				CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */,
+				CA09679A21A4D33E002369FD /* Assets.xcassets */,
+				CA09679C21A4D33E002369FD /* LaunchScreen.storyboard */,
+				CA09679F21A4D33E002369FD /* Info.plist */,
+			);
+			path = QiblaAR;
+			sourceTree = "<group>";
+		};
+		CA0967A721A4D33E002369FD /* QiblaARTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0967A821A4D33E002369FD /* QiblaARTests.swift */,
+				CA0967AA21A4D33E002369FD /* Info.plist */,
+			);
+			path = QiblaARTests;
+			sourceTree = "<group>";
+		};
+		CA0967B221A4D33E002369FD /* QiblaARUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CA0967B321A4D33E002369FD /* QiblaARUITests.swift */,
+				CA0967B521A4D33E002369FD /* Info.plist */,
+			);
+			path = QiblaARUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA09678D21A4D33D002369FD /* IslamicLandmarksAR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0967B821A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksAR" */;
+			buildPhases = (
+				CA09678A21A4D33D002369FD /* Sources */,
+				CA09678B21A4D33D002369FD /* Frameworks */,
+				CA09678C21A4D33D002369FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IslamicLandmarksAR;
+			productName = QiblaAR;
+			productReference = CA09678E21A4D33D002369FD /* IslamicLandmarksAR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CA0967A321A4D33E002369FD /* IslamicLandmarksARTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0967BB21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARTests" */;
+			buildPhases = (
+				CA0967A021A4D33E002369FD /* Sources */,
+				CA0967A121A4D33E002369FD /* Frameworks */,
+				CA0967A221A4D33E002369FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0967A621A4D33E002369FD /* PBXTargetDependency */,
+			);
+			name = IslamicLandmarksARTests;
+			productName = QiblaARTests;
+			productReference = CA0967A421A4D33E002369FD /* IslamicLandmarksARTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA0967AE21A4D33E002369FD /* IslamicLandmarksARUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA0967BE21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARUITests" */;
+			buildPhases = (
+				CA0967AB21A4D33E002369FD /* Sources */,
+				CA0967AC21A4D33E002369FD /* Frameworks */,
+				CA0967AD21A4D33E002369FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA0967B121A4D33E002369FD /* PBXTargetDependency */,
+			);
+			name = IslamicLandmarksARUITests;
+			productName = QiblaARUITests;
+			productReference = CA0967AF21A4D33E002369FD /* IslamicLandmarksARUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA09678621A4D33D002369FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "DateSeed Technologies";
+				TargetAttributes = {
+					CA09678D21A4D33D002369FD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					CA0967A321A4D33E002369FD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CA09678D21A4D33D002369FD;
+					};
+					CA0967AE21A4D33E002369FD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = CA09678D21A4D33D002369FD;
+					};
+				};
+			};
+			buildConfigurationList = CA09678921A4D33D002369FD /* Build configuration list for PBXProject "IslamicLandmarksAR" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA09678521A4D33D002369FD;
+			productRefGroup = CA09678F21A4D33D002369FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA09678D21A4D33D002369FD /* IslamicLandmarksAR */,
+				CA0967A321A4D33E002369FD /* IslamicLandmarksARTests */,
+				CA0967AE21A4D33E002369FD /* IslamicLandmarksARUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA09678C21A4D33D002369FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09679421A4D33D002369FD /* art.scnassets in Resources */,
+				CA09679E21A4D33E002369FD /* LaunchScreen.storyboard in Resources */,
+				CA09679B21A4D33E002369FD /* Assets.xcassets in Resources */,
+				CA09679921A4D33D002369FD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967A221A4D33E002369FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967AD21A4D33E002369FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA09678A21A4D33D002369FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA09679621A4D33D002369FD /* ViewController.swift in Sources */,
+				CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */,
+				CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */,
+				CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */,
+				CA0967C221A4F9D8002369FD /* VC+AddObject.swift in Sources */,
+				CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */,
+				CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */,
+				CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */,
+				CAFB6D9F21A8CA890039CDD5 /* DialogCollectionViewCell.swift in Sources */,
+				CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967A021A4D33E002369FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0967A921A4D33E002369FD /* QiblaARTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA0967AB21A4D33E002369FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA0967B421A4D33E002369FD /* QiblaARUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA0967A621A4D33E002369FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA09678D21A4D33D002369FD /* IslamicLandmarksAR */;
+			targetProxy = CA0967A521A4D33E002369FD /* PBXContainerItemProxy */;
+		};
+		CA0967B121A4D33E002369FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA09678D21A4D33D002369FD /* IslamicLandmarksAR */;
+			targetProxy = CA0967B021A4D33E002369FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA09679721A4D33D002369FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA09679821A4D33D002369FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA09679C21A4D33E002369FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA09679D21A4D33E002369FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA0967B621A4D33E002369FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA0967B721A4D33E002369FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA0967B921A4D33E002369FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaAR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA0967BA21A4D33E002369FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaAR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaAR;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA0967BC21A4D33E002369FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IslamicLandmarksAR.app/IslamicLandmarksAR";
+			};
+			name = Debug;
+		};
+		CA0967BD21A4D33E002369FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaARTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaARTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IslamicLandmarksAR.app/IslamicLandmarksAR";
+			};
+			name = Release;
+		};
+		CA0967BF21A4D33E002369FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiblaAR;
+			};
+			name = Debug;
+		};
+		CA0967C021A4D33E002369FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TNELUUJWJ;
+				INFOPLIST_FILE = QiblaARUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaARUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QiblaAR;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA09678921A4D33D002369FD /* Build configuration list for PBXProject "IslamicLandmarksAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0967B621A4D33E002369FD /* Debug */,
+				CA0967B721A4D33E002369FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0967B821A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksAR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0967B921A4D33E002369FD /* Debug */,
+				CA0967BA21A4D33E002369FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0967BB21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0967BC21A4D33E002369FD /* Debug */,
+				CA0967BD21A4D33E002369FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA0967BE21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA0967BF21A4D33E002369FD /* Debug */,
+				CA0967C021A4D33E002369FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA09678621A4D33D002369FD /* Project object */;
+}

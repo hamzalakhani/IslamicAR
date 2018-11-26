@@ -14,11 +14,10 @@ import SceneKit
 class DialogViewController: UIViewController {
     
     
-    let screens = ["KabaaImage", "QuranImage"]
-    let titles = ["Holy Kabaa","Holy Quran"]
-    let images = ["",""]
+    let screens = ["KabaaImage", "QuranImage","AqsaImage"]
+    let titles = ["Holy Kabaa","Holy Quran","Al-Aqsa"]
     
-    let nodeArray  = [KabahNode(),QuranNode()]
+    let nodeArray  = [KabahNode(),QuranNode(), AqsaNode()]
 
     
     //let names
@@ -42,7 +41,7 @@ class DialogViewController: UIViewController {
 
 extension DialogViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
