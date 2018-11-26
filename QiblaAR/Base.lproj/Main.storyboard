@@ -72,15 +72,120 @@
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="GGv-jl-WFL" id="htX-h3-MxA"/>
+                        <segue destination="sne-BG-PPm" kind="presentation" identifier="HomeToDialog" modalPresentationStyle="overCurrentContext" id="rW6-Od-5cX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
         </scene>
+        <!--Dialog View Controller-->
+        <scene sceneID="qRy-Hs-czd">
+            <objects>
+                <viewController id="sne-BG-PPm" customClass="DialogViewController" customModule="QiblaAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hie-QX-osW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9d-fN-7zq">
+                                <rect key="frame" x="0.0" y="287" width="375" height="380"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose A Sceen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJQ-lZ-CB6">
+                                        <rect key="frame" x="122" y="30" width="131" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lUH-OZ-G0a">
+                                        <rect key="frame" x="0.0" y="81" width="375" height="250"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="0UF-Rk-OFr"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Sbf-SH-a0c">
+                                            <size key="itemSize" width="140" height="250"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="screenCell" id="LUR-hd-qPM" customClass="DialogCollectionViewCell" customModule="QiblaAR" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="0.0" width="140" height="250"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="250"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-1V-273">
+                                                            <rect key="frame" x="8" y="28" width="124" height="220"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="220" id="ztS-86-ELt"/>
+                                                            </constraints>
+                                                            <state key="normal" image="KabaaImage"/>
+                                                            <connections>
+                                                                <action selector="screenImageButoonTapped:" destination="LUR-hd-qPM" eventType="touchUpInside" id="431-la-r7V"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">
+                                                            <rect key="frame" x="26.5" y="221" width="87" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="HfX-1V-273" firstAttribute="leading" secondItem="LUR-hd-qPM" secondAttribute="leadingMargin" id="YeX-yX-bLu"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="HfX-1V-273" secondAttribute="trailing" id="bbo-QX-pi6"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="dkW-iN-kcd" secondAttribute="bottom" id="dih-OB-ZkJ"/>
+                                                    <constraint firstItem="HfX-1V-273" firstAttribute="top" secondItem="LUR-hd-qPM" secondAttribute="topMargin" id="hJR-G3-ux9"/>
+                                                    <constraint firstItem="dkW-iN-kcd" firstAttribute="centerX" secondItem="LUR-hd-qPM" secondAttribute="centerX" id="zOL-c2-s7j"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="screenImageButton" destination="HfX-1V-273" id="K4J-ZN-dTB"/>
+                                                    <outlet property="screenLabel" destination="dkW-iN-kcd" id="qXh-y8-b6a"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="1vf-6I-0YV"/>
+                                    <constraint firstAttribute="trailing" secondItem="lUH-OZ-G0a" secondAttribute="trailing" id="3nw-te-VVF"/>
+                                    <constraint firstItem="FJQ-lZ-CB6" firstAttribute="top" secondItem="N9d-fN-7zq" secondAttribute="top" constant="30" id="6M7-LB-FZp"/>
+                                    <constraint firstItem="FJQ-lZ-CB6" firstAttribute="top" secondItem="N9d-fN-7zq" secondAttribute="top" constant="30" id="7Ko-uM-8uy"/>
+                                    <constraint firstItem="FJQ-lZ-CB6" firstAttribute="centerX" secondItem="N9d-fN-7zq" secondAttribute="centerX" id="8AQ-wY-Q0S"/>
+                                    <constraint firstItem="lUH-OZ-G0a" firstAttribute="top" secondItem="FJQ-lZ-CB6" secondAttribute="bottom" constant="30" id="jYP-Bp-KRQ"/>
+                                    <constraint firstItem="lUH-OZ-G0a" firstAttribute="leading" secondItem="N9d-fN-7zq" secondAttribute="leading" id="zqy-zx-OUo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N9d-fN-7zq" firstAttribute="leading" secondItem="Hcs-cx-jFi" secondAttribute="leading" id="C7j-pn-cp9"/>
+                            <constraint firstItem="Hcs-cx-jFi" firstAttribute="bottom" secondItem="N9d-fN-7zq" secondAttribute="bottom" id="jMg-24-gOz"/>
+                            <constraint firstItem="Hcs-cx-jFi" firstAttribute="trailing" secondItem="N9d-fN-7zq" secondAttribute="trailing" id="zzM-ec-sdR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hcs-cx-jFi"/>
+                    </view>
+                    <connections>
+                        <outlet property="screenCollectionView" destination="lUH-OZ-G0a" id="h1r-zp-42g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xd-DE-7yb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884" y="27"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Add" width="50" height="50"/>
+        <image name="KabaaImage" width="206" height="388"/>
         <image name="Minus" width="50" height="50"/>
         <image name="PlaceScreen" width="50" height="50"/>
     </resources>

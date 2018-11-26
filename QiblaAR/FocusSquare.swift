@@ -12,6 +12,7 @@ class FocusSquare: SCNNode{
     
     var isClosed: Bool = true {
         didSet {
+            
             geometry?.firstMaterial?.diffuse.contents = self.isClosed ? UIImage(named: "close") : UIImage(named: "open")
         }
     }
