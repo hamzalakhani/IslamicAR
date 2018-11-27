@@ -39,7 +39,31 @@
 //            return model
 //        }
         
-        
+        @objc func tappedLocation(_ gesture: UITapGestureRecognizer){
+            let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+            
+            lightImpactFeedbackGenerator.prepare()
+            
+            lightImpactFeedbackGenerator.impactOccurred()
+            
+            guard focusSquare != nil else {return}
+            
+            
+            
+            
+            let hitTest = sceneView.hitTest(screenCenter, types: .existingPlaneUsingExtent)
+            guard let worldTransformColumn3 = hitTest.first?.worldTransform.columns.3 else {return}
+            selectedNode.position = SCNVector3(worldTransformColumn3.x, worldTransformColumn3.y, worldTransformColumn3.z)
+            
+            sceneView.scene.rootNode.addChildNode(selectedNode)
+            //            print("\(modelName) added successfully")
+            
+            modelsInTheScene.append(selectedNode)
+            print("Currently have \(modelsInTheScene.count) model(s) in the scene")
+            
+            gesture.state = .ended
+//            sender.isHidden = true
+        }
         
         
         @IBAction func plusButtontapped(_ sender: UIButton)  {
@@ -70,6 +94,8 @@
 
         }
 }
+
+
 
 
 

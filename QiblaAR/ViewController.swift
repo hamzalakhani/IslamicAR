@@ -249,6 +249,9 @@ class ViewController: UIViewController {
         
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotateNode(_:)))
         self.view.addGestureRecognizer(rotateGesture)
+        
+        let tappedGesture = UITapGestureRecognizer(target: self, action: #selector(tappedLocation(_:)))
+        self.view.addGestureRecognizer(tappedGesture)
     }
     
     func updateFocusSquare() {
