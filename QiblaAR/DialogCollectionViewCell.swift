@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import  AudioToolbox
+import SceneKit
 class DialogCollectionViewCell: UICollectionViewCell {
  
     
@@ -19,7 +20,12 @@ class DialogCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var screenLabel: UILabel!
     
     
+    @IBOutlet weak var nodeView: SCNView!
+    
+    
     @IBAction func screenImageButtonTapped(_ sender: UIButton) {
+        let pop = SystemSoundID(1520)
+        AudioServicesPlaySystemSound(pop)
         delegate?.screenImageButtonTapped(index: index)
 
     }

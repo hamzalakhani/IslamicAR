@@ -11,13 +11,16 @@ import ARKit
 import SceneKit
 
 
+
 class DialogViewController: UIViewController {
     
     
-    let screens = ["KabaaImage", "QuranImage","AqsaImage"]
-    let titles = ["Holy Kabaa","Holy Quran","Al-Aqsa"]
+    let screens = ["KabaaImage", "AqsaImage"]
+    let titles = ["Holy Kabaa","Al-Aqsa"]
     
-    let nodeArray  = [KabahNode(),QuranNode(), AqsaNode()]
+    let nodeArray  = [KabahNode(), AqsaNode()]
+
+    let nodeArrayImages  = [KabahNode(), AqsaNode()]
 
     
     //let names
@@ -27,6 +30,8 @@ class DialogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    
         
         screenCollectionView.delegate = self
         screenCollectionView.dataSource = self
@@ -41,7 +46,7 @@ class DialogViewController: UIViewController {
 
 extension DialogViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -50,6 +55,13 @@ extension DialogViewController: UICollectionViewDelegate, UICollectionViewDataSo
         cell.screenLabel.text = titles[indexPath.row]
         cell.index = indexPath.row
         cell.delegate = self
+        
+        //scene view to show model in selection
+        
+//        let scene = SCNScene()
+//        cell.nodeView.scene = scene
+//        cell.nodeView.scene?.rootNode.addChildNode(nodeArrayImages[indexPath.row])
+        
         return cell
     }
     

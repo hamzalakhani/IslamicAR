@@ -9,13 +9,14 @@
 import UIKit
 import SceneKit
 import ARKit
-
+import AudioToolbox
 class ViewController: UIViewController {
 //, ARSCNViewDelegate
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var dalogButton: UIButton!
     
+    @IBOutlet weak var cameraButton: UIButton!
     var focusSquare: FocusSquare?
     var screenCenter: CGPoint!
     var modelsInTheScene:Array<SCNNode> = []
@@ -27,12 +28,17 @@ class ViewController: UIViewController {
     //Not Really Necessary But Can Use If You Like
     var isRotating = false
 
+//    @IBAction func cameraButtonTapped(_ sender: Any) {
+//        _ = sceneView.snapshot()
+//
+//    }
     
     @IBOutlet var sceneView: ARSCNView!
     
 
     @IBAction func placeScreenTapped(_ sender: UIButton) {
-        
+        let pop = SystemSoundID(1520)
+        AudioServicesPlaySystemSound(pop)
         performSegue(withIdentifier: "HomeToDialog", sender: nil)
         
 
@@ -54,6 +60,14 @@ class ViewController: UIViewController {
 //
 //    
     @IBAction func minusButtonTapped(_ sender: UIButton) {
+        let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+        
+        // Prepare shortly before playing
+        lightImpactFeedbackGenerator.prepare()
+        
+        // Play the haptic signal
+        lightImpactFeedbackGenerator.impactOccurred()
+        
         
         modelsInTheScene.first?.removeFromParentNode()
 
@@ -75,6 +89,15 @@ class ViewController: UIViewController {
     @objc func moveNode(_ gesture: UIPanGestureRecognizer) {
         
         if !isRotating{
+            
+            
+            let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+            
+            // Prepare shortly before playing
+            selectionFeedbackGenerator.prepare()
+            
+            // Play the haptic signal
+            selectionFeedbackGenerator.selectionChanged()
             
             //1. Get The Current Touch Point
             let currentTouchPoint = gesture.location(in: self.sceneView)
@@ -124,6 +147,14 @@ class ViewController: UIViewController {
 
     
        @objc func pinched(sender: UIPinchGestureRecognizer) {
+        
+        let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+        
+        // Prepare shortly before playing
+        selectionFeedbackGenerator.prepare()
+        
+        // Play the haptic signal
+        selectionFeedbackGenerator.selectionChanged()
         
         
         let firstVisibleModel = modelsInTheScene.first

@@ -15,9 +15,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+//        self.splashScreen()
         // Override point for customization after application launch.
         return true
     }
+    
+//    private func splashScreen(){
+//        let launchScreenVC = UIStoryboard.init(name: "LaunchsScreen", bundle: nil)
+//        let rootVC = launchScreenVC.instantiateViewController(withIdentifier: "splashController")
+//        self.window?.rootViewController = rootVC
+//        self.window?.makeKeyAndVisible()
+//        Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(dissmissSplashController), userInfo: nil, repeats: false)
+//    }
+//
+//    @objc func dissmissSplashController(){
+//        let mainVC = UIStoryboard.init(name: "Main", bundle: nil)
+//        let rootVC = mainVC.instantiateViewController(withIdentifier: "aRController")
+//
+//        self.window?.rootViewController = rootVC
+//        self.window?.makeKeyAndVisible()
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

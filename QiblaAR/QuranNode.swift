@@ -34,7 +34,7 @@ class QuranNode: SCNNode{
         //                case "kabaa":         scale = 0.0001
         //                default:                scale = 1
         //                }
-        model.scale = SCNVector3(0.0025, 0.0025, 0.0025)
+        model.scale = SCNVector3(1, 1,1)
         addChildNode(model)
         
     }

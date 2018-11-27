@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,17 +13,53 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="splashController" id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-5S-iOA">
+                                <rect key="frame" x="58" y="491" width="259.5" height="24"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Created and Developed by">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="Futura-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dateSeed" translatesAutoresizingMaskIntoConstraints="NO" id="ubz-2v-62B">
+                                <rect key="frame" x="125" y="523" width="125" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="P7R-ff-5ao"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="14x-vM-Ftg"/>
+                            <constraint firstItem="ubz-2v-62B" firstAttribute="top" secondItem="yn7-5S-iOA" secondAttribute="bottom" constant="8" id="6ee-J5-dVx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="E4b-hD-edY"/>
+                            <constraint firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="FTG-Yp-bWK"/>
+                            <constraint firstItem="ubz-2v-62B" firstAttribute="top" secondItem="yn7-5S-iOA" secondAttribute="bottom" constant="8" id="GAc-K4-eHY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="Ghx-nr-Ilc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="LQU-tx-Wnl"/>
+                            <constraint firstItem="ubz-2v-62B" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="125" id="Slh-cW-qag"/>
+                            <constraint firstItem="ubz-2v-62B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="Ynm-iz-OZb"/>
+                            <constraint firstItem="yn7-5S-iOA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f98-HW-BdG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="yYo-ee-gsb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dateSeed" width="375" height="375"/>
+    </resources>
 </document>

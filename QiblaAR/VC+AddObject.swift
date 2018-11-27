@@ -43,8 +43,13 @@
         
         
         @IBAction func plusButtontapped(_ sender: UIButton)  {
-            print("Add button tapped")
             
+            
+            let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .heavy)
+            
+            lightImpactFeedbackGenerator.prepare()
+            
+            lightImpactFeedbackGenerator.impactOccurred()
             
             guard focusSquare != nil else {return}
             
