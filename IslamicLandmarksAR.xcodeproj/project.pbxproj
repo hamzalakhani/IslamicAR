@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7041AB30EC269429CDBF8B8E /* Pods_IslamicLandmarksAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A18AAC66E2F4FD98D53762 /* Pods_IslamicLandmarksAR.framework */; };
+		AAF437D3EECA369C5E89CF33 /* Pods_IslamicLandmarksARTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DFD59CEA1C7806B33A9DBC0 /* Pods_IslamicLandmarksARTests.framework */; };
 		CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09679121A4D33D002369FD /* AppDelegate.swift */; };
 		CA09679421A4D33D002369FD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CA09679321A4D33D002369FD /* art.scnassets */; };
 		CA09679621A4D33D002369FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA09679521A4D33D002369FD /* ViewController.swift */; };
@@ -16,6 +18,11 @@
 		CA0967A921A4D33E002369FD /* QiblaARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967A821A4D33E002369FD /* QiblaARTests.swift */; };
 		CA0967B421A4D33E002369FD /* QiblaARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967B321A4D33E002369FD /* QiblaARUITests.swift */; };
 		CA0967C221A4F9D8002369FD /* VC+AddObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0967C121A4F9D8002369FD /* VC+AddObject.swift */; };
+		CAF8401E21ADFAB8003B9FF9 /* discarded code.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8401D21ADFAB8003B9FF9 /* discarded code.swift */; };
+		CAF8402A21AFC0D4003B9FF9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF8402921AFC0D4003B9FF9 /* CoreGraphics.framework */; };
+		CAF8402C21AFC0DF003B9FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF8402B21AFC0DF003B9FF9 /* Foundation.framework */; };
+		CAF8402E21AFC0F4003B9FF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF8402D21AFC0F4003B9FF9 /* QuartzCore.framework */; };
+		CAF8403C21AFC34E003B9FF9 /* MPCoachMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */; };
 		CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */; };
 		CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */; };
 		CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */; };
@@ -23,6 +30,7 @@
 		CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA021AA40940039CDD5 /* KabahNode.swift */; };
 		CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */; };
 		CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */; };
+		D62D0F4DBA1AD7F1399EC6C9 /* Pods_IslamicLandmarksARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45216469008FFF458F4C4910 /* Pods_IslamicLandmarksARUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00007899CC657BA7E93C97FB /* Pods-IslamicLandmarksAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksAR/Pods-IslamicLandmarksAR.release.xcconfig"; sourceTree = "<group>"; };
+		1DFD59CEA1C7806B33A9DBC0 /* Pods_IslamicLandmarksARTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamicLandmarksARTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45216469008FFF458F4C4910 /* Pods_IslamicLandmarksARUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamicLandmarksARUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		613590174F7E4CF53CC545EE /* Pods-IslamicLandmarksARTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksARTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksARTests/Pods-IslamicLandmarksARTests.release.xcconfig"; sourceTree = "<group>"; };
+		6E8471BC0EEA31A3548D0416 /* Pods-IslamicLandmarksARTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksARTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksARTests/Pods-IslamicLandmarksARTests.debug.xcconfig"; sourceTree = "<group>"; };
+		897AB05CF00B7E6B7798EA32 /* Pods-IslamicLandmarksAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksAR/Pods-IslamicLandmarksAR.debug.xcconfig"; sourceTree = "<group>"; };
+		C8A3EF4551F0EF9A4AEC4CD9 /* Pods-IslamicLandmarksARUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksARUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksARUITests/Pods-IslamicLandmarksARUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CA09678E21A4D33D002369FD /* IslamicLandmarksAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IslamicLandmarksAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA09679121A4D33D002369FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA09679321A4D33D002369FD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -58,6 +73,13 @@
 		CA0967B321A4D33E002369FD /* QiblaARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaARUITests.swift; sourceTree = "<group>"; };
 		CA0967B521A4D33E002369FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0967C121A4F9D8002369FD /* VC+AddObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+AddObject.swift"; sourceTree = "<group>"; };
+		CAF8401D21ADFAB8003B9FF9 /* discarded code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "discarded code.swift"; sourceTree = "<group>"; };
+		CAF8402921AFC0D4003B9FF9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CAF8402B21AFC0DF003B9FF9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAF8402D21AFC0F4003B9FF9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CAF8403921AFC33D003B9FF9 /* MPCoachMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCoachMarks.h; sourceTree = "<group>"; };
+		CAF8403A21AFC34D003B9FF9 /* IslamicLandmarksAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IslamicLandmarksAR-Bridging-Header.h"; sourceTree = "<group>"; };
+		CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCoachMarks.m; sourceTree = "<group>"; };
 		CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSCNView.swift"; sourceTree = "<group>"; };
 		CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +87,8 @@
 		CAFB6DA021AA40940039CDD5 /* KabahNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabahNode.swift; sourceTree = "<group>"; };
 		CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranNode.swift; sourceTree = "<group>"; };
 		CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqsaNode.swift; sourceTree = "<group>"; };
+		CCE1077014F3A2B81A541B6A /* Pods-IslamicLandmarksARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksARUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksARUITests/Pods-IslamicLandmarksARUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3A18AAC66E2F4FD98D53762 /* Pods_IslamicLandmarksAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamicLandmarksAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +96,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF8402E21AFC0F4003B9FF9 /* QuartzCore.framework in Frameworks */,
+				CAF8402C21AFC0DF003B9FF9 /* Foundation.framework in Frameworks */,
+				CAF8402A21AFC0D4003B9FF9 /* CoreGraphics.framework in Frameworks */,
+				7041AB30EC269429CDBF8B8E /* Pods_IslamicLandmarksAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF437D3EECA369C5E89CF33 /* Pods_IslamicLandmarksARTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +115,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62D0F4DBA1AD7F1399EC6C9 /* Pods_IslamicLandmarksARUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65F78147F8C9D9521AAAFC63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAF8402D21AFC0F4003B9FF9 /* QuartzCore.framework */,
+				CAF8402B21AFC0DF003B9FF9 /* Foundation.framework */,
+				CAF8402921AFC0D4003B9FF9 /* CoreGraphics.framework */,
+				E3A18AAC66E2F4FD98D53762 /* Pods_IslamicLandmarksAR.framework */,
+				1DFD59CEA1C7806B33A9DBC0 /* Pods_IslamicLandmarksARTests.framework */,
+				45216469008FFF458F4C4910 /* Pods_IslamicLandmarksARUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2E314871947FD745F518BBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				897AB05CF00B7E6B7798EA32 /* Pods-IslamicLandmarksAR.debug.xcconfig */,
+				00007899CC657BA7E93C97FB /* Pods-IslamicLandmarksAR.release.xcconfig */,
+				6E8471BC0EEA31A3548D0416 /* Pods-IslamicLandmarksARTests.debug.xcconfig */,
+				613590174F7E4CF53CC545EE /* Pods-IslamicLandmarksARTests.release.xcconfig */,
+				CCE1077014F3A2B81A541B6A /* Pods-IslamicLandmarksARUITests.debug.xcconfig */,
+				C8A3EF4551F0EF9A4AEC4CD9 /* Pods-IslamicLandmarksARUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA09678521A4D33D002369FD = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +155,8 @@
 				CA0967A721A4D33E002369FD /* QiblaARTests */,
 				CA0967B221A4D33E002369FD /* QiblaARUITests */,
 				CA09678F21A4D33D002369FD /* Products */,
+				C2E314871947FD745F518BBC /* Pods */,
+				65F78147F8C9D9521AAAFC63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,16 +178,20 @@
 				CA09679521A4D33D002369FD /* ViewController.swift */,
 				CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */,
 				CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */,
+				CAF8403921AFC33D003B9FF9 /* MPCoachMarks.h */,
 				CA0967C121A4F9D8002369FD /* VC+AddObject.swift */,
+				CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */,
 				CAFB6DA021AA40940039CDD5 /* KabahNode.swift */,
 				CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */,
 				CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */,
 				CA09679721A4D33D002369FD /* Main.storyboard */,
 				CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */,
+				CAF8401D21ADFAB8003B9FF9 /* discarded code.swift */,
 				CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */,
 				CA09679A21A4D33E002369FD /* Assets.xcassets */,
 				CA09679C21A4D33E002369FD /* LaunchScreen.storyboard */,
 				CA09679F21A4D33E002369FD /* Info.plist */,
+				CAF8403A21AFC34D003B9FF9 /* IslamicLandmarksAR-Bridging-Header.h */,
 			);
 			path = QiblaAR;
 			sourceTree = "<group>";
@@ -159,6 +221,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA0967B821A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksAR" */;
 			buildPhases = (
+				5D1ADD0FDE462E05C8AD0687 /* [CP] Check Pods Manifest.lock */,
 				CA09678A21A4D33D002369FD /* Sources */,
 				CA09678B21A4D33D002369FD /* Frameworks */,
 				CA09678C21A4D33D002369FD /* Resources */,
@@ -176,6 +239,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA0967BB21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARTests" */;
 			buildPhases = (
+				5C4597CC2848AD241699BFB4 /* [CP] Check Pods Manifest.lock */,
 				CA0967A021A4D33E002369FD /* Sources */,
 				CA0967A121A4D33E002369FD /* Frameworks */,
 				CA0967A221A4D33E002369FD /* Resources */,
@@ -194,6 +258,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA0967BE21A4D33E002369FD /* Build configuration list for PBXNativeTarget "IslamicLandmarksARUITests" */;
 			buildPhases = (
+				C9570E63598310A9EDDB2631 /* [CP] Check Pods Manifest.lock */,
 				CA0967AB21A4D33E002369FD /* Sources */,
 				CA0967AC21A4D33E002369FD /* Frameworks */,
 				CA0967AD21A4D33E002369FD /* Resources */,
@@ -220,6 +285,7 @@
 				TargetAttributes = {
 					CA09678D21A4D33D002369FD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					CA0967A321A4D33E002369FD = {
 						CreatedOnToolsVersion = 10.1;
@@ -279,12 +345,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C4597CC2848AD241699BFB4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IslamicLandmarksARTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1ADD0FDE462E05C8AD0687 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IslamicLandmarksAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9570E63598310A9EDDB2631 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IslamicLandmarksARUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA09678A21A4D33D002369FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CA09679621A4D33D002369FD /* ViewController.swift in Sources */,
+				CAF8401E21ADFAB8003B9FF9 /* discarded code.swift in Sources */,
 				CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */,
 				CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */,
 				CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */,
@@ -293,6 +429,7 @@
 				CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */,
 				CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */,
 				CAFB6D9F21A8CA890039CDD5 /* DialogCollectionViewCell.swift in Sources */,
+				CAF8403C21AFC34E003B9FF9 /* MPCoachMarks.m in Sources */,
 				CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,8 +540,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Islamic Landmarks AR";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hamzalakhani/Desktop/QiblaAR/Islamic-Landmarks-AR-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -457,8 +596,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Islamic Landmarks AR";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hamzalakhani/Desktop/QiblaAR/Islamic-Landmarks-AR-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -466,9 +607,12 @@
 		};
 		CA0967B921A4D33E002369FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897AB05CF00B7E6B7798EA32 /* Pods-IslamicLandmarksAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4TNELUUJWJ;
 				INFOPLIST_FILE = QiblaAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,6 +621,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QiblaAR/IslamicLandmarksAR-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,9 +631,12 @@
 		};
 		CA0967BA21A4D33E002369FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00007899CC657BA7E93C97FB /* Pods-IslamicLandmarksAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4TNELUUJWJ;
 				INFOPLIST_FILE = QiblaAR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -495,6 +645,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hamzalakhani.QiblaAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QiblaAR/IslamicLandmarksAR-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -502,6 +654,7 @@
 		};
 		CA0967BC21A4D33E002369FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8471BC0EEA31A3548D0416 /* Pods-IslamicLandmarksARTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -523,6 +676,7 @@
 		};
 		CA0967BD21A4D33E002369FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 613590174F7E4CF53CC545EE /* Pods-IslamicLandmarksARTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -544,6 +698,7 @@
 		};
 		CA0967BF21A4D33E002369FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE1077014F3A2B81A541B6A /* Pods-IslamicLandmarksARUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -564,6 +719,7 @@
 		};
 		CA0967C021A4D33E002369FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8A3EF4551F0EF9A4AEC4CD9 /* Pods-IslamicLandmarksARUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

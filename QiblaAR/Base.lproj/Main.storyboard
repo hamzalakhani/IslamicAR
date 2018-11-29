@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="width" constant="50" id="fSx-ks-VWo"/>
                                     <constraint firstAttribute="height" constant="50" id="vUN-pw-YHG"/>
                                 </constraints>
-                                <state key="normal" image="PlaceScreen">
+                                <state key="normal" image="mosque">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="width" constant="50" id="k4Y-RA-i1c"/>
                                     <constraint firstAttribute="height" constant="50" id="lxH-Ts-CrG"/>
                                 </constraints>
-                                <state key="normal" image="Add"/>
+                                <state key="normal" image="photo-camera"/>
                                 <connections>
                                     <action selector="plusButtontapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="YbN-R1-p9Z"/>
                                 </connections>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Doq-AC-FI8"/>
                                     <constraint firstAttribute="width" constant="50" id="bXm-VR-SL8"/>
                                 </constraints>
-                                <state key="normal" image="Minus"/>
+                                <state key="normal" image="delete"/>
                                 <connections>
                                     <action selector="minusButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lOp-o1-24C"/>
                                 </connections>
@@ -103,46 +103,46 @@
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="NAI-dR-DKg"/>
                                         </constraints>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Sbf-SH-a0c">
-                                            <size key="itemSize" width="333" height="250"/>
+                                            <size key="itemSize" width="167" height="158"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                             <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="screenCell" id="LUR-hd-qPM" customClass="DialogCollectionViewCell" customModule="IslamicLandmarksAR" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="0.0" width="333" height="250"/>
+                                                <rect key="frame" x="20" y="46" width="167" height="158"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                    <rect key="frame" x="0.0" y="0.0" width="333" height="250"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="158"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">
+                                                            <rect key="frame" x="51" y="-155.5" width="65" height="14"/>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfX-1V-273">
-                                                            <rect key="frame" x="61" y="40" width="208" height="210"/>
+                                                            <rect key="frame" x="9" y="35" width="138" height="143"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="210" id="ztS-86-ELt"/>
+                                                                <constraint firstAttribute="height" constant="143" id="ztS-86-ELt"/>
                                                             </constraints>
                                                             <state key="normal" image="KabaaImage"/>
                                                             <connections>
                                                                 <action selector="screenImageButtonTapped:" destination="LUR-hd-qPM" eventType="touchUpInside" id="LMh-Us-i7d"/>
                                                             </connections>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">
-                                                            <rect key="frame" x="134" y="-63.5" width="65" height="14"/>
-                                                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="HfX-1V-273" firstAttribute="leading" secondItem="LUR-hd-qPM" secondAttribute="leadingMargin" constant="53" id="YeX-yX-bLu"/>
-                                                    <constraint firstAttribute="trailingMargin" secondItem="HfX-1V-273" secondAttribute="trailing" constant="56" id="bbo-QX-pi6"/>
+                                                    <constraint firstItem="HfX-1V-273" firstAttribute="leading" secondItem="LUR-hd-qPM" secondAttribute="leadingMargin" constant="1" id="YeX-yX-bLu"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="HfX-1V-273" secondAttribute="trailing" constant="12" id="bbo-QX-pi6"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="dkW-iN-kcd" secondAttribute="bottom" constant="291.5" id="dih-OB-ZkJ"/>
-                                                    <constraint firstItem="HfX-1V-273" firstAttribute="top" secondItem="LUR-hd-qPM" secondAttribute="topMargin" constant="12" id="hJR-G3-ux9"/>
+                                                    <constraint firstItem="HfX-1V-273" firstAttribute="top" secondItem="LUR-hd-qPM" secondAttribute="topMargin" constant="7" id="hJR-G3-ux9"/>
                                                     <constraint firstItem="dkW-iN-kcd" firstAttribute="centerX" secondItem="LUR-hd-qPM" secondAttribute="centerX" id="zOL-c2-s7j"/>
                                                 </constraints>
-                                                <size key="customSize" width="333" height="250"/>
+                                                <size key="customSize" width="167" height="158"/>
                                                 <connections>
                                                     <outlet property="screenImageButton" destination="HfX-1V-273" id="K4J-ZN-dTB"/>
                                                     <outlet property="screenLabel" destination="dkW-iN-kcd" id="qXh-y8-b6a"/>
@@ -151,7 +151,7 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="2ip-Ts-h4F"/>
                                     <constraint firstAttribute="trailing" secondItem="lUH-OZ-G0a" secondAttribute="trailing" id="3nw-te-VVF"/>
@@ -192,9 +192,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add" width="50" height="50"/>
         <image name="KabaaImage" width="509" height="509"/>
-        <image name="Minus" width="50" height="50"/>
-        <image name="PlaceScreen" width="50" height="50"/>
+        <image name="delete" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="mosque" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="photo-camera" width="46.428211212158203" height="46.428211212158203"/>
     </resources>
 </document>

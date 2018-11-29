@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string></string>
+	<key></key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>  &lt;string&gt;YOUR CUSTOM USAGE DESCRIPTION GOES HERE.&lt;/string&gt;
+  &lt;string&gt;YOUR CUSTOM USAGE DESCRIPTION GOES HERE.&lt;/string&gt;
+&lt;string&gt;YOUR CUSTOM USAGE DESCRIPTION GOES HERE.&lt;/string&gt;</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

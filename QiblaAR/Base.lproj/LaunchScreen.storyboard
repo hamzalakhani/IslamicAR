@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn7-5S-iOA">
-                                <rect key="frame" x="58" y="491" width="259.5" height="24"/>
+                                <rect key="frame" x="57.5" y="491" width="260" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Created and Developed by">
                                         <attributes>
@@ -36,18 +36,29 @@
                                     <constraint firstAttribute="height" constant="124" id="P7R-ff-5ao"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mosque" translatesAutoresizingMaskIntoConstraints="NO" id="ly6-5F-4x1">
+                                <rect key="frame" x="55" y="120" width="265" height="236"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="236" id="Arq-Af-VVZ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yn7-5S-iOA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="03g-I1-HRW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="14x-vM-Ftg"/>
+                            <constraint firstItem="ly6-5F-4x1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="309-Vw-wVf"/>
                             <constraint firstItem="ubz-2v-62B" firstAttribute="top" secondItem="yn7-5S-iOA" secondAttribute="bottom" constant="8" id="6ee-J5-dVx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="E4b-hD-edY"/>
                             <constraint firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="FTG-Yp-bWK"/>
                             <constraint firstItem="ubz-2v-62B" firstAttribute="top" secondItem="yn7-5S-iOA" secondAttribute="bottom" constant="8" id="GAc-K4-eHY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="Ghx-nr-Ilc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubz-2v-62B" secondAttribute="bottom" constant="20" id="LQU-tx-Wnl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ly6-5F-4x1" secondAttribute="trailing" constant="55" id="RfB-6D-2u1"/>
                             <constraint firstItem="ubz-2v-62B" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="125" id="Slh-cW-qag"/>
+                            <constraint firstItem="ly6-5F-4x1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WDr-xO-O3b"/>
                             <constraint firstItem="ubz-2v-62B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="125" id="Ynm-iz-OZb"/>
+                            <constraint firstItem="ly6-5F-4x1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="bu9-5l-jRo"/>
                             <constraint firstItem="yn7-5S-iOA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f98-HW-BdG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubz-2v-62B" secondAttribute="trailing" constant="125" id="yYo-ee-gsb"/>
                         </constraints>
@@ -61,5 +72,6 @@
     </scenes>
     <resources>
         <image name="dateSeed" width="375" height="375"/>
+        <image name="mosque" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
 </document>

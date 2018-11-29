@@ -10,7 +10,12 @@ import UIKit
 import SceneKit
 import ARKit
 import AudioToolbox
-class ViewController: UIViewController {
+import Foundation
+import QuartzCore
+
+
+
+class ViewController: UIViewController  {
 //, ARSCNViewDelegate
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
@@ -21,24 +26,24 @@ class ViewController: UIViewController {
     var screenCenter: CGPoint!
     var modelsInTheScene:Array<SCNNode> = []
     var selectedNode = SCNNode()
-    
+    //coachmarks
     //Store The Rotation Of The CurrentNode
     var currentAngleY: Float = 0.0
     
     //Not Really Necessary But Can Use If You Like
     var isRotating = false
 
-//    @IBAction func cameraButtonTapped(_ sender: Any) {
-//        _ = sceneView.snapshot()
-//
-//    }
+
     
     @IBOutlet var sceneView: ARSCNView!
-    
+//    let coachMarksController = CoachMarksController()
+//    let pointOfInterest = UIView()
+
 
     @IBAction func placeScreenTapped(_ sender: UIButton) {
         let pop = SystemSoundID(1520)
         AudioServicesPlaySystemSound(pop)
+        minusButton.isHidden = false
         performSegue(withIdentifier: "HomeToDialog", sender: nil)
         
 
@@ -71,9 +76,11 @@ class ViewController: UIViewController {
         
         modelsInTheScene.first?.removeFromParentNode()
 
-        modelsInTheScene.removeFirst()
         
-        plusButton.isHidden = false
+            modelsInTheScene.removeFirst()
+
+        
+        plusButton.isHidden = true
         
 
     }
@@ -183,6 +190,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.plusButton.isHidden = true
+        self.minusButton.isHidden = true
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -190,13 +200,86 @@ class ViewController: UIViewController {
         sceneView.showsStatistics = false
         
         // Create a new scene
-//        let scene = SCNScene(named: "art.scnassets/kabaa.scn")!
+        //        let scene = SCNScene(named: "art.scnassets/kabaa.scn")!
         
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
-    
+        
         
         screenCenter = view.center
+        
+        //coachmarks
+        
+            // Setup coach marks
+            let coachmark1 = CGRect(x: (UIScreen.main.bounds.size.width - 125) / 2, y: 64, width: 125, height: 125)
+            let coachmark2 = CGRect(x: (UIScreen.main.bounds.size.width - 300) / 2, y: coachmark1.origin.y + coachmark1.size.height, width: 300, height: 80)
+            let coachmark3 = CGRect(x: 2, y: 20, width: 45, height: 45)
+            
+//            num MaskShape : Int {
+//                case default
+//                case shape_CIRCLE
+//                case shape_SQUARE
+//                }
+//
+//                enum LabelAligment : Int {
+//                    case label_ALIGNMENT_CENTER
+//                    case label_ALIGNMENT_LEFT
+//                    case label_ALIGNMENT_RIGHT
+//                }
+//
+//                enum LabelPosition : Int {
+//                    case label_POSITION_BOTTOM
+//                    case label_POSITION_LEFT
+//                    case label_POSITION_TOP
+//                    case label_POSITION_RIGHT
+//                    case label_POSITION_RIGHT_BOTTOM
+//                }
+//
+//                enum ContinueLocation : Int {
+//                    case location_TOP
+//                    case location_CENTER
+//                    case location_BOTTOM
+//                }
+            // Setup coach marks
+//        let coachMarks = [[setValue(coachmark1, forKey: "rect"),
+//                              setValue("You can put marks over images", forKey: "caption"),
+//                              setValue(MaskShape.SHAPE_CIRCLE, forKey: "shape"),
+//                              setValue(LabelPosition.LABEL_POSITION_BOTTOM, forKey: "position"),
+//                              setValue((Bool:true), forKey: "showArrow")],
+//
+//                              [setValue(coachmark2, forKey: "rect"),
+//                            setValue("Also, we can show buttons", forKey: "caption")],
+//
+//
+//                              [setValue(coachmark3, forKey: "rect"),
+//                               setValue("And works with navigations buttons too", forKey: "caption"),
+//                                setValue(MaskShape.SHAPE_SQUARE, forKey: "shape")
+//            ]]
+        
+        let coachMarks: Array = [["react": coachmark1,
+                                  "caption": "You can put marks over images",
+                                  "shape": MaskShape.SHAPE_CIRCLE.rawValue,
+                                  "position": LabelPosition.LABEL_POSITION_BOTTOM.rawValue,
+                                  "showArrow": (Bool:true) ],
+                                 ["react": coachmark2,
+                                    "caption": "You can put marks over images",],
+                                 ["react": coachmark3,
+                                    "caption": "You can put marks over images",
+                                    "shape": MaskShape.SHAPE_SQUARE.rawValue]]
+        
+            let coachMarksView = MPCoachMarks(frame: view.bounds, coachMarks: coachMarks)
+            view.addSubview(coachMarksView!)
+            coachMarksView!.start()
+
+            
+            
+        
+        
+//        self.coachMarksController.dataSource = self
+//        self.coachMarksController.start(on: self)
+
+        
+        
         
 //        let scene = SCNScene()
 //
@@ -217,6 +300,30 @@ class ViewController: UIViewController {
         addGestures()
     }
     
+    //coachmarks methods
+    
+    
+    
+//    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
+//        return 1
+//    }
+//    
+//    
+//    func coachMarksController(_ coachMarksController: CoachMarksController,
+//                              coachMarkAt index: Int) -> CoachMark {
+//        return coachMarksController.helper.makeCoachMark(for: pointOfInterest)
+//    }
+//    
+//    func coachMarksController(_ coachMarksController: CoachMarksController, coachMarkViewsAt index: Int, madeFrom coachMark: CoachMark) -> (bodyView: CoachMarkBodyView, arrowView: CoachMarkArrowView?) {
+//        let coachViews = coachMarksController.helper.makeDefaultCoachViews(withArrow: true, arrowOrientation: coachMark.arrowOrientation)
+//        
+//        coachViews.bodyView.hintLabel.text = "Hello! I'm a Coach Mark!"
+//        coachViews.bodyView.nextLabel.text = "Ok!"
+//        
+//        return (bodyView: coachViews.bodyView, arrowView: coachViews.arrowView)
+//    }
+
+ 
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -283,80 +390,7 @@ class ViewController: UIViewController {
     }
     
     
-    
-    // MARK: - ARSCNViewDelegate
-    
 
-    // Override to create and configure nodes for anchors added to the view's session.
-//    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-//        var node: SCNNode?
-//
-//        if let planeAnchor = anchor as? ARPlaneAnchor {
-//            node = SCNNode()
-//            planeGeometry = SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z))
-//            planeGeometry.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent(0.5)
-//
-//            let planNode = SCNNode(geometry: planeGeometry)
-//            planNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
-//            planNode.transform = SCNMatrix4MakeRotation(-Float.pi/2, 1, 0, 0)
-//            updateMaterial()
-//
-//            node?.addChildNode(planNode)
-//
-//            anchors.append(planeAnchor)
-//
-//        }
-//
-//        return node
-//    }
-
-//    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-//        if let planeAnchor = anchor as? ARPlaneAnchor {
-//            if anchors.contains(planeAnchor){
-//                if node.childNodes.count > 0{
-//                    let planeNode = node.childNodes.first!
-//                    planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
-//                    
-//                    if let plane = planeNode.geometry as? SCNPlane{
-//                        plane.width = CGFloat(planeAnchor.extent.x)
-//                        plane.height = CGFloat(planeAnchor.extent.z)
-//                        
-//                        updateMaterial()
-//                    }
-//                }
-//            }
-//            
-//        }
-//    }
-//
-//    func updateMaterial()  {
-//        let material = self.planeGeometry.materials.first!
-//        material.diffuse.contentsTransform = SCNMatrix4MakeScale(Float(self.planeGeometry.width), Float(self.planeGeometry.height), 1)
-//    }
-//
-//
-//
-//
-//
-//    func addNodeLocation(location:CGPoint) {
-//        guard anchors.count > 0 else {print("anchors are not created yet"); return}
-//
-//        let hitResults = sceneView.hitTest(location, types: .existingPlaneUsingExtent)
-//        if hitResults.count > 0 {
-//            let result = hitResults.first!
-//            let newLocation = SCNVector3(x: result.worldTransform.columns.3.x, y: result.worldTransform.columns.3.y , z: result.worldTransform.columns.3.z)
-//
-//            let kabaaNode = KabaaNode()
-//            kabaaMNode = kabaaNode
-//            kabaaNode.position = newLocation
-//            sceneView.scene.rootNode.addChildNode(kabaaNode)
-//
-//        }
-//    }
-//
-    
-   
-    
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
         
@@ -380,8 +414,7 @@ extension ViewController: DialogViewControllerDelegate{
         selectedNode = node
         
     }
-    }
-    
+}
     
     
     

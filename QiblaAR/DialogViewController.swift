@@ -15,7 +15,7 @@ import SceneKit
 class DialogViewController: UIViewController {
     
     
-    let screens = ["KabaaImage", "AqsaImage"]
+    let screens = ["mecca", "dome"]
     let titles = ["Holy Kabaa","Al-Aqsa"]
     
     let nodeArray  = [KabahNode(), AqsaNode()]
