@@ -41,7 +41,10 @@
             print("Currently have \(modelsInTheScene.count) model(s) in the scene")
             
             plusButton.isHidden = false
-            gesture.state = .ended
+            
+            
+        
+            
 //            sender.isHidden = true
             
             

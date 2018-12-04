@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Doq-AC-FI8"/>
                                     <constraint firstAttribute="width" constant="50" id="bXm-VR-SL8"/>
                                 </constraints>
-                                <state key="normal" image="delete"/>
+                                <state key="normal" image="delete12"/>
                                 <connections>
                                     <action selector="minusButtonTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="lOp-o1-24C"/>
                                 </connections>
@@ -190,10 +190,43 @@
             </objects>
             <point key="canvasLocation" x="884" y="26.53673163418291"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="wi4-Zk-tJU">
+            <objects>
+                <collectionViewController id="CEK-ch-mCw" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dnz-27-2dM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gXN-R7-cS1">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r3k-Tr-Xg9">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="CEK-ch-mCw" id="Mxf-7b-pIB"/>
+                            <outlet property="delegate" destination="CEK-ch-mCw" id="xRw-jh-ZTB"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v1G-lt-Em5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="KabaaImage" width="509" height="509"/>
-        <image name="delete" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="delete12" width="409.60000610351562" height="409.60000610351562"/>
         <image name="mosque" width="409.60000610351562" height="409.60000610351562"/>
         <image name="photo-camera" width="46.428211212158203" height="46.428211212158203"/>
     </resources>

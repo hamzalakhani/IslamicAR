@@ -12,14 +12,17 @@ import ARKit
 import AudioToolbox
 import Foundation
 import QuartzCore
-
-
+import BLTNBoard
 
 class ViewController: UIViewController  {
+    
+    
 //, ARSCNViewDelegate
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var dalogButton: UIButton!
+    @IBOutlet weak var leftPlane: UIImageView!
+    @IBOutlet weak var rightPlane: UIImageView!
     
     @IBOutlet weak var cameraButton: UIButton!
     var focusSquare: FocusSquare?
@@ -32,6 +35,10 @@ class ViewController: UIViewController  {
     
     //Not Really Necessary But Can Use If You Like
     var isRotating = false
+    
+    //Bulletin Vars
+    var currentBackground = (name: "Dimmed", style: BLTNBackgroundViewStyle.dimmed)
+    private var shouldHideStatusBar: Bool = false
 
 
     
@@ -76,7 +83,6 @@ class ViewController: UIViewController  {
         
         modelsInTheScene.first?.removeFromParentNode()
 
-        
             modelsInTheScene.removeFirst()
 
         
@@ -185,11 +191,19 @@ class ViewController: UIViewController  {
 //    var anchors = [ARAnchor]()
 //    var sceneLight:SCNLight!
     
+    //bulliton board
     
+    lazy var bulletinManager: BLTNItemManager = {
+        
+        
+        let introPage = BulletinDataSource.makeIntroPage()
+        return BLTNItemManager(rootItem: introPage)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+
         self.plusButton.isHidden = true
         self.minusButton.isHidden = true
         
@@ -211,98 +225,73 @@ class ViewController: UIViewController  {
         //coachmarks
         
             // Setup coach marks
-            let coachmark1 = CGRect(x: (UIScreen.main.bounds.size.width - 125) / 2, y: 64, width: 125, height: 125)
-            let coachmark2 = CGRect(x: (UIScreen.main.bounds.size.width - 300) / 2, y: coachmark1.origin.y + coachmark1.size.height, width: 300, height: 80)
-            let coachmark3 = CGRect(x: 2, y: 20, width: 45, height: 45)
-            
-//            num MaskShape : Int {
-//                case default
-//                case shape_CIRCLE
-//                case shape_SQUARE
-//                }
 //
-//                enum LabelAligment : Int {
-//                    case label_ALIGNMENT_CENTER
-//                    case label_ALIGNMENT_LEFT
-//                    case label_ALIGNMENT_RIGHT
-//                }
-//
-//                enum LabelPosition : Int {
-//                    case label_POSITION_BOTTOM
-//                    case label_POSITION_LEFT
-//                    case label_POSITION_TOP
-//                    case label_POSITION_RIGHT
-//                    case label_POSITION_RIGHT_BOTTOM
-//                }
-//
-//                enum ContinueLocation : Int {
-//                    case location_TOP
-//                    case location_CENTER
-//                    case location_BOTTOM
-//                }
-            // Setup coach marks
-//        let coachMarks = [[setValue(coachmark1, forKey: "rect"),
-//                              setValue("You can put marks over images", forKey: "caption"),
-//                              setValue(MaskShape.SHAPE_CIRCLE, forKey: "shape"),
-//                              setValue(LabelPosition.LABEL_POSITION_BOTTOM, forKey: "position"),
-//                              setValue((Bool:true), forKey: "showArrow")],
-//
-//                              [setValue(coachmark2, forKey: "rect"),
-//                            setValue("Also, we can show buttons", forKey: "caption")],
-//
-//
-//                              [setValue(coachmark3, forKey: "rect"),
-//                               setValue("And works with navigations buttons too", forKey: "caption"),
-//                                setValue(MaskShape.SHAPE_SQUARE, forKey: "shape")
-//            ]]
-        
-        let coachMarks: Array = [["react": coachmark1,
-                                  "caption": "You can put marks over images",
-                                  "shape": MaskShape.SHAPE_CIRCLE.rawValue,
-                                  "position": LabelPosition.LABEL_POSITION_BOTTOM.rawValue,
-                                  "showArrow": (Bool:true) ],
-                                 ["react": coachmark2,
-                                    "caption": "You can put marks over images",],
-                                 ["react": coachmark3,
-                                    "caption": "You can put marks over images",
-                                    "shape": MaskShape.SHAPE_SQUARE.rawValue]]
-        
-            let coachMarksView = MPCoachMarks(frame: view.bounds, coachMarks: coachMarks)
-            view.addSubview(coachMarksView!)
-            coachMarksView!.start()
 
             
-            
         
-        
-//        self.coachMarksController.dataSource = self
-//        self.coachMarksController.start(on: self)
-
-        
-        
-        
-//        let scene = SCNScene()
-//
-//        // Set the scene to the view
-//        sceneView.scene = scene
-        
-        
-        
-//        sceneLight = SCNLight()
-//        sceneLight.type = .omni
-//
-//        let lightNode = SCNNode()
-//        lightNode.light = sceneLight
-//        lightNode.position = SCNVector3(x: 0, y: 10, z: 2)
-//
-//        sceneView.scene.rootNode.addChildNode(lightNode)
         
         addGestures()
     }
     
+    
+    //BulletinBoard methods
+    func showBulletin() {
+        
+        reloadManager()
+        
+        //        Uncomment to customize interface
+        //        bulletinManager.cardCornerRadius = 22
+        //        bulletinManager.edgeSpacing = .none
+        //        bulletinManager.allowsSwipeInteraction = false
+        //        bulletinManager.hidesHomeIndicator = true
+        //        bulletinManager.backgroundColor = .blue
+        
+        bulletinManager.backgroundViewStyle = currentBackground.style
+        bulletinManager.statusBarAppearance = shouldHideStatusBar ? .hidden : .automatic
+        bulletinManager.showBulletin(above: self)
+        
+    }
+
+    func reloadManager() {
+        let introPage = BulletinDataSource.makeIntroPage()
+        bulletinManager = BLTNItemManager(rootItem: introPage)
+    }
+
+//    func prepareForBulletin() {
+//
+//        // Register notification observers
+//
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(setupDidComplete),
+//                                               name: .SetupDidComplete,
+//                                               object: nil)
+//
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(favoriteIndexDidChange(notification:)),
+//                                               name: .FavoriteTabIndexDidChange,
+//                                               object: nil)
+//        showBulletin()
+//
+//    }
+    
+    
     //coachmarks methods
     
-    
+//    func addCoachMarks(){
+//        self.leftPlane.isHidden = false
+//        self.plusButton.isHidden = false
+//
+//        let coachMarks: Array = [["rect": CGRect(x: 46, y: 700, width: 50, height: 50),
+//                                  "caption": "Select Landmark",
+//                                  "shape": "circle"],
+//                                 ["rect": CGRect(x: 125, y: 345, width: 125, height: 125),
+//                                  "caption": "Move Phone to detect flat surface","shape": ""]]
+//
+//        let coachMarksView = DDCoachMarksView(frame: view.bounds, coachMarks: coachMarks)
+//        view.addSubview(coachMarksView!)
+//
+//        coachMarksView!.start()
+//    }
     
 //    func numberOfCoachMarks(for coachMarksController: CoachMarksController) -> Int {
 //        return 1
@@ -337,7 +326,10 @@ class ViewController: UIViewController  {
         // Run the view's session
         sceneView.session.run(configuration)
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        showBulletin()
+
+    }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -411,7 +403,8 @@ class ViewController: UIViewController  {
 extension ViewController: DialogViewControllerDelegate{
     func screenImageButtontapped(node: SCNNode) {
         
-        selectedNode = node
+       selectedNode = node
+            
         
     }
 }

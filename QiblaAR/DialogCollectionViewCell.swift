@@ -26,8 +26,10 @@ class DialogCollectionViewCell: UICollectionViewCell {
     @IBAction func screenImageButtonTapped(_ sender: UIButton) {
         let pop = SystemSoundID(1520)
         AudioServicesPlaySystemSound(pop)
+//        performSegue(withIdentifier: "HomeToDialog", sender: nil)
+        
         delegate?.screenImageButtonTapped(index: index)
-
+        
     }
     
     

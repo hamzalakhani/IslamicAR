@@ -23,6 +23,11 @@
 		CAF8402C21AFC0DF003B9FF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF8402B21AFC0DF003B9FF9 /* Foundation.framework */; };
 		CAF8402E21AFC0F4003B9FF9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF8402D21AFC0F4003B9FF9 /* QuartzCore.framework */; };
 		CAF8403C21AFC34E003B9FF9 /* MPCoachMarks.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */; };
+		CAF8404A21B0B2FD003B9FF9 /* DDCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF8404621B0B2FD003B9FF9 /* DDCircleView.m */; };
+		CAF8404B21B0B2FD003B9FF9 /* DDCoachMarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF8404721B0B2FD003B9FF9 /* DDCoachMarksView.m */; };
+		CAF8404E21B0B43A003B9FF9 /* DDBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF8404D21B0B43A003B9FF9 /* DDBubble.m */; };
+		CAF8405021B1F163003B9FF9 /* BulletinDataScource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8404F21B1F163003B9FF9 /* BulletinDataScource.swift */; };
+		CAF8405221B1F503003B9FF9 /* IntroPageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8405121B1F503003B9FF9 /* IntroPageItem.swift */; };
 		CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */; };
 		CAFB6D9921A796D40039CDD5 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */; };
 		CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */; };
@@ -80,6 +85,14 @@
 		CAF8403921AFC33D003B9FF9 /* MPCoachMarks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPCoachMarks.h; sourceTree = "<group>"; };
 		CAF8403A21AFC34D003B9FF9 /* IslamicLandmarksAR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IslamicLandmarksAR-Bridging-Header.h"; sourceTree = "<group>"; };
 		CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPCoachMarks.m; sourceTree = "<group>"; };
+		CAF8404621B0B2FD003B9FF9 /* DDCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCircleView.m; sourceTree = "<group>"; };
+		CAF8404721B0B2FD003B9FF9 /* DDCoachMarksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoachMarksView.m; sourceTree = "<group>"; };
+		CAF8404821B0B2FD003B9FF9 /* DDCoachMarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCoachMarksView.h; sourceTree = "<group>"; };
+		CAF8404921B0B2FD003B9FF9 /* DDCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCircleView.h; sourceTree = "<group>"; };
+		CAF8404C21B0B43A003B9FF9 /* DDBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBubble.h; sourceTree = "<group>"; };
+		CAF8404D21B0B43A003B9FF9 /* DDBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBubble.m; sourceTree = "<group>"; };
+		CAF8404F21B1F163003B9FF9 /* BulletinDataScource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletinDataScource.swift; sourceTree = "<group>"; };
+		CAF8405121B1F503003B9FF9 /* IntroPageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPageItem.swift; sourceTree = "<group>"; };
 		CAFB6D9621A783BC0039CDD5 /* VC+ARSCNView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSCNView.swift"; sourceTree = "<group>"; };
 		CAFB6D9821A796D40039CDD5 /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
 		CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
@@ -187,11 +200,19 @@
 				CA09679721A4D33D002369FD /* Main.storyboard */,
 				CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */,
 				CAF8401D21ADFAB8003B9FF9 /* discarded code.swift */,
+				CAF8405121B1F503003B9FF9 /* IntroPageItem.swift */,
 				CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */,
 				CA09679A21A4D33E002369FD /* Assets.xcassets */,
 				CA09679C21A4D33E002369FD /* LaunchScreen.storyboard */,
 				CA09679F21A4D33E002369FD /* Info.plist */,
 				CAF8403A21AFC34D003B9FF9 /* IslamicLandmarksAR-Bridging-Header.h */,
+				CAF8404921B0B2FD003B9FF9 /* DDCircleView.h */,
+				CAF8404621B0B2FD003B9FF9 /* DDCircleView.m */,
+				CAF8404F21B1F163003B9FF9 /* BulletinDataScource.swift */,
+				CAF8404821B0B2FD003B9FF9 /* DDCoachMarksView.h */,
+				CAF8404721B0B2FD003B9FF9 /* DDCoachMarksView.m */,
+				CAF8404C21B0B43A003B9FF9 /* DDBubble.h */,
+				CAF8404D21B0B43A003B9FF9 /* DDBubble.m */,
 			);
 			path = QiblaAR;
 			sourceTree = "<group>";
@@ -225,6 +246,7 @@
 				CA09678A21A4D33D002369FD /* Sources */,
 				CA09678B21A4D33D002369FD /* Frameworks */,
 				CA09678C21A4D33D002369FD /* Resources */,
+				B1A76D3EFB7BD7451E1D746E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -390,6 +412,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B1A76D3EFB7BD7451E1D746E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IslamicLandmarksAR/Pods-IslamicLandmarksAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BulletinBoard/BLTNBoard.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLTNBoard.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IslamicLandmarksAR/Pods-IslamicLandmarksAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C9570E63598310A9EDDB2631 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,13 +463,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF8405221B1F503003B9FF9 /* IntroPageItem.swift in Sources */,
 				CA09679621A4D33D002369FD /* ViewController.swift in Sources */,
+				CAF8405021B1F163003B9FF9 /* BulletinDataScource.swift in Sources */,
 				CAF8401E21ADFAB8003B9FF9 /* discarded code.swift in Sources */,
 				CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */,
+				CAF8404A21B0B2FD003B9FF9 /* DDCircleView.m in Sources */,
+				CAF8404B21B0B2FD003B9FF9 /* DDCoachMarksView.m in Sources */,
 				CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */,
 				CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */,
 				CA0967C221A4F9D8002369FD /* VC+AddObject.swift in Sources */,
 				CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */,
+				CAF8404E21B0B43A003B9FF9 /* DDBubble.m in Sources */,
 				CA09679221A4D33D002369FD /* AppDelegate.swift in Sources */,
 				CAFB6D9721A783BC0039CDD5 /* VC+ARSCNView.swift in Sources */,
 				CAFB6D9F21A8CA890039CDD5 /* DialogCollectionViewCell.swift in Sources */,
