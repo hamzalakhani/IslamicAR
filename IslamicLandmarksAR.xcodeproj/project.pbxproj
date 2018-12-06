@@ -33,8 +33,9 @@
 		CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */; };
 		CAFB6D9F21A8CA890039CDD5 /* DialogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */; };
 		CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA021AA40940039CDD5 /* KabahNode.swift */; };
-		CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */; };
+		CAFB6DA321AB51A80039CDD5 /* BMosqueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA221AB51A80039CDD5 /* BMosqueNode.swift */; };
 		CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */; };
+		CAFF635121B6D1630004BE02 /* BadshahiNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFF635021B6D1630004BE02 /* BadshahiNode.swift */; };
 		D62D0F4DBA1AD7F1399EC6C9 /* Pods_IslamicLandmarksARUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45216469008FFF458F4C4910 /* Pods_IslamicLandmarksARUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +99,9 @@
 		CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		CAFB6D9E21A8CA890039CDD5 /* DialogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAFB6DA021AA40940039CDD5 /* KabahNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabahNode.swift; sourceTree = "<group>"; };
-		CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranNode.swift; sourceTree = "<group>"; };
+		CAFB6DA221AB51A80039CDD5 /* BMosqueNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMosqueNode.swift; sourceTree = "<group>"; };
 		CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqsaNode.swift; sourceTree = "<group>"; };
+		CAFF635021B6D1630004BE02 /* BadshahiNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadshahiNode.swift; sourceTree = "<group>"; };
 		CCE1077014F3A2B81A541B6A /* Pods-IslamicLandmarksARUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamicLandmarksARUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamicLandmarksARUITests/Pods-IslamicLandmarksARUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E3A18AAC66E2F4FD98D53762 /* Pods_IslamicLandmarksAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamicLandmarksAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -195,7 +197,8 @@
 				CA0967C121A4F9D8002369FD /* VC+AddObject.swift */,
 				CAF8403B21AFC34E003B9FF9 /* MPCoachMarks.m */,
 				CAFB6DA021AA40940039CDD5 /* KabahNode.swift */,
-				CAFB6DA221AB51A80039CDD5 /* QuranNode.swift */,
+				CAFF635021B6D1630004BE02 /* BadshahiNode.swift */,
+				CAFB6DA221AB51A80039CDD5 /* BMosqueNode.swift */,
 				CAFB6DA721ABAB940039CDD5 /* AqsaNode.swift */,
 				CA09679721A4D33D002369FD /* Main.storyboard */,
 				CAFB6D9C21A8C2390039CDD5 /* DialogViewController.swift */,
@@ -470,7 +473,8 @@
 				CAFB6DA821ABAB940039CDD5 /* AqsaNode.swift in Sources */,
 				CAF8404A21B0B2FD003B9FF9 /* DDCircleView.m in Sources */,
 				CAF8404B21B0B2FD003B9FF9 /* DDCoachMarksView.m in Sources */,
-				CAFB6DA321AB51A80039CDD5 /* QuranNode.swift in Sources */,
+				CAFF635121B6D1630004BE02 /* BadshahiNode.swift in Sources */,
+				CAFB6DA321AB51A80039CDD5 /* BMosqueNode.swift in Sources */,
 				CAFB6DA121AA40940039CDD5 /* KabahNode.swift in Sources */,
 				CA0967C221A4F9D8002369FD /* VC+AddObject.swift in Sources */,
 				CAFB6D9D21A8C2390039CDD5 /* DialogViewController.swift in Sources */,

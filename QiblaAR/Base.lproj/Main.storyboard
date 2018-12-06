@@ -21,21 +21,8 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGv-jl-WFL">
                                 <rect key="frame" x="0.0" y="6" width="375" height="661"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UiJ-5W-MI1">
-                                <rect key="frame" x="46" y="589" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="fSx-ks-VWo"/>
-                                    <constraint firstAttribute="height" constant="50" id="vUN-pw-YHG"/>
-                                </constraints>
-                                <state key="normal" image="mosque">
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="placeScreenTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="T5r-Ad-7NL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igp-dZ-6ka">
-                                <rect key="frame" x="162.5" y="589" width="50" height="50"/>
+                                <rect key="frame" x="46" y="589" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="k4Y-RA-i1c"/>
                                     <constraint firstAttribute="height" constant="50" id="lxH-Ts-CrG"/>
@@ -59,21 +46,18 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="igp-dZ-6ka" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="46" id="1ld-al-xNb"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="ALn-N7-xFi" secondAttribute="trailing" constant="46" id="4fB-Wl-v3l"/>
                             <constraint firstAttribute="bottom" secondItem="GGv-jl-WFL" secondAttribute="bottom" id="7cU-kj-bQV"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="igp-dZ-6ka" secondAttribute="bottom" constant="28" id="D5x-wO-wKK"/>
-                            <constraint firstItem="igp-dZ-6ka" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="Mzl-jA-pf4"/>
                             <constraint firstItem="GGv-jl-WFL" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" constant="6" id="NEO-Rd-su0"/>
                             <constraint firstItem="GGv-jl-WFL" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="SSh-9V-1qF"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="ALn-N7-xFi" secondAttribute="bottom" constant="28" id="TSA-eC-ch2"/>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="UiJ-5W-MI1" secondAttribute="bottom" constant="28" id="YXn-4h-fLx"/>
-                            <constraint firstItem="UiJ-5W-MI1" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="46" id="gkv-WI-dF8"/>
                             <constraint firstAttribute="trailing" secondItem="GGv-jl-WFL" secondAttribute="trailing" id="nzo-97-F25"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
-                        <outlet property="dalogButton" destination="UiJ-5W-MI1" id="D95-fJ-8qb"/>
                         <outlet property="minusButton" destination="ALn-N7-xFi" id="ewT-0z-a1e"/>
                         <outlet property="plusButton" destination="igp-dZ-6ka" id="EVN-IM-XUD"/>
                         <outlet property="sceneView" destination="GGv-jl-WFL" id="htX-h3-MxA"/>
@@ -87,7 +71,7 @@
         <!--Dialog View Controller-->
         <scene sceneID="qRy-Hs-czd">
             <objects>
-                <viewController id="sne-BG-PPm" customClass="DialogViewController" customModule="IslamicLandmarksAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DialogViewController" id="sne-BG-PPm" customClass="DialogViewController" customModule="IslamicLandmarksAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hie-QX-osW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +86,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="C3T-cb-Yuv"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="NAI-dR-DKg"/>
                                         </constraints>
-                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Sbf-SH-a0c">
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="20" id="Sbf-SH-a0c">
                                             <size key="itemSize" width="167" height="158"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -110,14 +94,14 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="screenCell" id="LUR-hd-qPM" customClass="DialogCollectionViewCell" customModule="IslamicLandmarksAR" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="46" width="167" height="158"/>
+                                                <rect key="frame" x="20" y="0.0" width="167" height="158"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                     <rect key="frame" x="0.0" y="0.0" width="167" height="158"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holy Kabaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-iN-kcd">
-                                                            <rect key="frame" x="51" y="-155.5" width="65" height="14"/>
+                                                            <rect key="frame" x="51" y="5" width="65" height="14"/>
                                                             <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
@@ -136,9 +120,9 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
+                                                    <constraint firstItem="dkW-iN-kcd" firstAttribute="top" secondItem="LUR-hd-qPM" secondAttribute="top" constant="5" id="Bi8-uv-Ibx"/>
                                                     <constraint firstItem="HfX-1V-273" firstAttribute="leading" secondItem="LUR-hd-qPM" secondAttribute="leadingMargin" constant="1" id="YeX-yX-bLu"/>
                                                     <constraint firstAttribute="trailingMargin" secondItem="HfX-1V-273" secondAttribute="trailing" constant="12" id="bbo-QX-pi6"/>
-                                                    <constraint firstAttribute="bottomMargin" secondItem="dkW-iN-kcd" secondAttribute="bottom" constant="291.5" id="dih-OB-ZkJ"/>
                                                     <constraint firstItem="HfX-1V-273" firstAttribute="top" secondItem="LUR-hd-qPM" secondAttribute="topMargin" constant="7" id="hJR-G3-ux9"/>
                                                     <constraint firstItem="dkW-iN-kcd" firstAttribute="centerX" secondItem="LUR-hd-qPM" secondAttribute="centerX" id="zOL-c2-s7j"/>
                                                 </constraints>
@@ -150,6 +134,12 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Landmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxM-bj-OSS">
+                                        <rect key="frame" x="106.5" y="8" width="162" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <constraints>
@@ -157,8 +147,11 @@
                                     <constraint firstAttribute="trailing" secondItem="lUH-OZ-G0a" secondAttribute="trailing" id="3nw-te-VVF"/>
                                     <constraint firstItem="lUH-OZ-G0a" firstAttribute="leading" secondItem="N9d-fN-7zq" secondAttribute="leading" id="4Yy-RK-S77"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="380" id="5nD-IO-crU"/>
+                                    <constraint firstItem="TxM-bj-OSS" firstAttribute="centerX" secondItem="N9d-fN-7zq" secondAttribute="centerX" id="HRq-1Z-0Ld"/>
+                                    <constraint firstItem="TxM-bj-OSS" firstAttribute="centerX" secondItem="N9d-fN-7zq" secondAttribute="centerX" id="JPH-PZ-99H"/>
                                     <constraint firstItem="lUH-OZ-G0a" firstAttribute="top" secondItem="N9d-fN-7zq" secondAttribute="top" constant="30" id="KoR-be-hRe"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="156" id="PD0-4d-0ol"/>
+                                    <constraint firstItem="lUH-OZ-G0a" firstAttribute="top" secondItem="TxM-bj-OSS" secondAttribute="bottom" constant="1" id="WRL-H7-Ixf"/>
                                     <constraint firstAttribute="trailing" secondItem="lUH-OZ-G0a" secondAttribute="trailing" id="x7g-hB-Lof"/>
                                     <constraint firstItem="lUH-OZ-G0a" firstAttribute="leading" secondItem="N9d-fN-7zq" secondAttribute="leading" id="zqy-zx-OUo"/>
                                 </constraints>
@@ -190,44 +183,10 @@
             </objects>
             <point key="canvasLocation" x="884" y="26.53673163418291"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="wi4-Zk-tJU">
-            <objects>
-                <collectionViewController id="CEK-ch-mCw" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dnz-27-2dM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gXN-R7-cS1">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="r3k-Tr-Xg9">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="CEK-ch-mCw" id="Mxf-7b-pIB"/>
-                            <outlet property="delegate" destination="CEK-ch-mCw" id="xRw-jh-ZTB"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v1G-lt-Em5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="KabaaImage" width="509" height="509"/>
         <image name="delete12" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="mosque" width="409.60000610351562" height="409.60000610351562"/>
         <image name="photo-camera" width="46.428211212158203" height="46.428211212158203"/>
     </resources>
 </document>

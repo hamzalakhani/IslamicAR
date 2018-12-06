@@ -14,7 +14,7 @@ import Foundation
 import QuartzCore
 import BLTNBoard
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     
 //, ARSCNViewDelegate
@@ -23,6 +23,8 @@ class ViewController: UIViewController  {
     @IBOutlet weak var dalogButton: UIButton!
     @IBOutlet weak var leftPlane: UIImageView!
     @IBOutlet weak var rightPlane: UIImageView!
+    
+
     
     @IBOutlet weak var cameraButton: UIButton!
     var focusSquare: FocusSquare?
@@ -39,6 +41,8 @@ class ViewController: UIViewController  {
     //Bulletin Vars
     var currentBackground = (name: "Dimmed", style: BLTNBackgroundViewStyle.dimmed)
     private var shouldHideStatusBar: Bool = false
+    
+    
 
 
     
@@ -72,6 +76,8 @@ class ViewController: UIViewController  {
 //
 //    
     @IBAction func minusButtonTapped(_ sender: UIButton) {
+        
+
         let lightImpactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
         
         // Prepare shortly before playing
@@ -85,8 +91,8 @@ class ViewController: UIViewController  {
 
             modelsInTheScene.removeFirst()
 
-        
-        plusButton.isHidden = true
+        performSegue(withIdentifier: "HomeToDialog", sender: nil)
+
         
 
     }
@@ -104,13 +110,13 @@ class ViewController: UIViewController  {
         if !isRotating{
             
             
-            let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+//            let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
             
             // Prepare shortly before playing
-            selectionFeedbackGenerator.prepare()
+//            selectionFeedbackGenerator.prepare()
             
             // Play the haptic signal
-            selectionFeedbackGenerator.selectionChanged()
+//            selectionFeedbackGenerator.selectionChanged()
             
             //1. Get The Current Touch Point
             let currentTouchPoint = gesture.location(in: self.sceneView)
@@ -128,6 +134,7 @@ class ViewController: UIViewController  {
             
             let firstVisibleModel = modelsInTheScene.first
 
+            
             firstVisibleModel!.simdPosition = float3(newPosition.x, newPosition.y, newPosition.z)
             
         }
@@ -161,13 +168,13 @@ class ViewController: UIViewController  {
     
        @objc func pinched(sender: UIPinchGestureRecognizer) {
         
-        let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
+//        let selectionFeedbackGenerator = UISelectionFeedbackGenerator()
         
         // Prepare shortly before playing
-        selectionFeedbackGenerator.prepare()
+//        selectionFeedbackGenerator.prepare()
         
         // Play the haptic signal
-        selectionFeedbackGenerator.selectionChanged()
+//        selectionFeedbackGenerator.selectionChanged()
         
         
         let firstVisibleModel = modelsInTheScene.first
@@ -183,6 +190,7 @@ class ViewController: UIViewController  {
         if segue.identifier == "HomeToDialog" {
             let toVC = segue.destination as! DialogViewController
             toVC.delegate = self
+            
         }
     }
     
@@ -204,8 +212,7 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
 
 
-        self.plusButton.isHidden = true
-        self.minusButton.isHidden = true
+        
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -229,8 +236,11 @@ class ViewController: UIViewController  {
 
             
         
-        
+        sceneView.isUserInteractionEnabled = true
+        sceneView.isMultipleTouchEnabled = true
         addGestures()
+        
+        
     }
     
     
@@ -327,8 +337,19 @@ class ViewController: UIViewController  {
         sceneView.session.run(configuration)
     }
     override func viewDidAppear(_ animated: Bool) {
-        showBulletin()
-
+        performSegue(withIdentifier: "HomeToDialog", sender: nil)
+//        showBulletin()
+    
+    }
+    
+    //show selction view
+    
+    func selectAtStartView() {
+        
+        self.dismiss(animated: true, completion: {
+            let vc = DialogViewController()
+            self.present(vc, animated: true, completion: nil)
+        })
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -342,15 +363,20 @@ class ViewController: UIViewController  {
         
         let pinchGesture = UIPinchGestureRecognizer(target: self, action: #selector(pinched(sender:)))
         sceneView.addGestureRecognizer(pinchGesture)
-        
+        pinchGesture.delegate = self
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(moveNode(_:)))
-        self.view.addGestureRecognizer(panGesture)
-        
+        sceneView.addGestureRecognizer(panGesture)
+        panGesture.delegate = self
         let rotateGesture = UIRotationGestureRecognizer(target: self, action: #selector(rotateNode(_:)))
-        self.view.addGestureRecognizer(rotateGesture)
-        
+        sceneView.addGestureRecognizer(rotateGesture)
+        rotateGesture.delegate = self
         let tappedGesture = UITapGestureRecognizer(target: self, action: #selector(tappedLocation(_:)))
-        self.view.addGestureRecognizer(tappedGesture)
+        sceneView.addGestureRecognizer(tappedGesture)
+        tappedGesture.delegate = self
+    }
+    func gestureRecognizer(_: UIGestureRecognizer,
+                           shouldRecognizeSimultaneouslyWith shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer) -> Bool {
+        return true
     }
     
     func updateFocusSquare() {

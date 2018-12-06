@@ -40,8 +40,6 @@
             modelsInTheScene.append(selectedNode)
             print("Currently have \(modelsInTheScene.count) model(s) in the scene")
             
-            plusButton.isHidden = false
-            
             
         
             

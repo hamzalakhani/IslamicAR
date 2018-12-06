@@ -9,6 +9,7 @@
 import UIKit
 import  AudioToolbox
 import SceneKit
+
 class DialogCollectionViewCell: UICollectionViewCell {
  
     
@@ -26,11 +27,10 @@ class DialogCollectionViewCell: UICollectionViewCell {
     @IBAction func screenImageButtonTapped(_ sender: UIButton) {
         let pop = SystemSoundID(1520)
         AudioServicesPlaySystemSound(pop)
-//        performSegue(withIdentifier: "HomeToDialog", sender: nil)
-        
+//        let dVC = DialogViewController()
+//        dVC.performSegue(withIdentifier: "ToAR", sender: nil)
         delegate?.screenImageButtonTapped(index: index)
-        
-    }
+   }
     
     
     

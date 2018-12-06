@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        self.splashScreen()
-        // Override point for customization after application launch.
+        
+        // Then push that view controller onto the navigation stack
+
         return true
     }
     
